@@ -1,0 +1,21 @@
+/* Estilos personalizados para las tarjetas de proyectos */
+.project-card {
+    background-color: black;
+    color: white;
+}
+.project-list-group {
+    background-color: black;
+}
+
+/* Estilos personalizados para el texto dentro de las tarjetas */
+.project-text {
+    color: #ccc;
+    /* Puedes cambiar esto al color de texto deseado */
+}
+
+/* Estilos personalizados para los enlaces dentro de las tarjetas */
+.project-link {
+    color: #3498db;
+    /* Puedes cambiar esto al color de enlace deseado */
+}
+

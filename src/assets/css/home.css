@@ -1,0 +1,44 @@
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    text-align: center;
+    /* Para centrar el texto horizontalmente */
+}
+
+
+.home-name {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.home-roles span {
+    font-size: 1.5em;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes typingAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
