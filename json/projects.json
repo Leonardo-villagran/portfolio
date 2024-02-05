@@ -1,0 +1,156 @@
+{   
+    "title" : "Proyectos",
+    "projects" : [
+        {
+            "image" : "images/projects/biotik.jpg",
+            "title": "Biotik - Web App",
+            "bodyText": "- Web principal de la empresa. \n - Frontend desarrollado en React-Vite \n - Backend desarrollado en Express.\n - Datos obtenidos desde Postgres.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/biotik-web-completo"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://www.biotik.cl"
+                }
+            ],
+            "tags" : [
+                "React-Vite",
+                "Express",
+                "Postgres",
+                "GCP",
+                "Proxy-Manager", "Docker"
+            ]
+        },
+        {
+            "image" : "images/projects/gestion.jpg",
+            "title": "Biotik - ODK Gestión",
+            "bodyText": "- Sistema de gestión de usuarios y proyectos.\n - Visualización de proceso de proyectos a través de websockets.\n - Visualización de informes y mapas",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/odk-web-api"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://gestion.biotik.cl"
+                }
+            ],
+            "tags" : [
+                "React-Vite",
+                "Express",
+                "Websockets",
+                "Postgres",
+                "GCP", 
+                "Google drive",
+                "Google maps", "Docker"
+
+            ]
+        },
+        {
+            "image" : "images/projects/process.jpg",
+            "title": "Biotik - ODK Process",
+            "bodyText": "- Sistema de gestión de datos obtenidos desde servidor ODK Central.\n - Procesamiento de proyectos para generación de informes en Google Sheet.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/odk-2"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://flask-app.biotik.cl"
+                }
+            ],
+            "tags" : [
+                "Python",
+                "Flask",
+                "Websockets",
+                "Postgres",
+                "GCP",
+                "Google Sheet",
+                "ODK Central", "Docker"
+            ]
+        },
+        {
+            "image" : "images/projects/comics.jpg",
+            "title": "ComicsKites - Web App",
+            "bodyText": "- Web principal de una tienda virtual de cómics. \n - Frontend desarrollado en React-Vite. \n - Datos obtenidos desde base de datos Postgres \n - Proyecto final de Desafío Latam.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/comicskite_front"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://react-comicskites.onrender.com"
+                }
+            ],
+            "tags" : [
+                "React-Vite",
+                "Express",
+                "Postgres"
+            ]
+        },
+        {
+            "image" : "images/projects/chicagoasociados.jpg",
+            "title": "Chicago Asesorias - Web App",
+            "bodyText": "- Web principal de la empresa. \n - Frontend desarrollado en React. \n - Datos obtenidos desde Json.\n - App implementada en Github Pages.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/chicagoasesorias"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/chicagoasesorias/"
+                }
+            ],
+            "tags" : [
+                "React",
+                "Json", 
+                "GitHub Pages"
+            ]
+        },
+        {
+            "image" : "images/projects/pizza.jpg",
+            "title": "Pizzería - Web App",
+            "bodyText": "- Web principal de la empresa. \n - Frontend desarrollado en React. \n - Datos obtenidos desde Json.\n - App implementada en Netlify.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/pizzeria"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://polite-babka-484d6e.netlify.app"
+                }
+            ],
+            "tags" : [
+                "React",
+                "Json",
+                "Netlify"
+            ]
+        },
+        {
+            "image" : "images/projects/pokemon.jpg",
+            "title": "Frontend PokeApi - Web App",
+            "bodyText": "- Web que obtiene pokemones desde un listado web. \n - Frontend desarrollado en React. \n - Datos obtenidos desde la PokeApi.\n - App implementada en Github Pages.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/pokemon-app"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://polite-babka-484d6e.netlify.app"
+                }
+            ],
+            "tags" : [
+                "React",
+                "Json",
+                "Github Pages"
+            ]
+        }
+    ]
+}
