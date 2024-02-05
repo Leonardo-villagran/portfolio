@@ -11,7 +11,6 @@ import Contact from './views/Contact';
 
 function App() {
 
-
   return (
     <Router >
       <Navigation />

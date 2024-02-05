@@ -1,9 +1,70 @@
-# React + Vite
+## React Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto.
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# portfolio
+- [Instrucciones de Uso](#instrucciones-de-uso)
+    - [1. Clonar el Repositorio](#1-clonar-el-repositorio)
+    - [2. Instalar Dependencias](#2-instalar-dependencias)
+    - [3. Iniciar la Aplicación](#3-iniciar-la-aplicación)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Configuración de las Rutas](#configuración-de-las-rutas)
+- [Dependencias Utilizadas](#dependencias-utilizadas)
+- [Personalización](#personalización)
+
+
+
+### Instrucciones de Uso
+
+Sigue estos pasos para configurar y ejecutar la aplicación en tu entorno local.
+
+#### 1. Clonar el Repositorio
+
+```bash
+git clone https://tu-repositorio.git
+cd tu-repositorio
+```
+
+#### 2. Instalar Dependencias
+
+```bash
+npm install
+```
+
+#### 3. Iniciar la Aplicación
+
+```bash
+npm run dev
+```
+
+La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para verla.
+
+### Estructura del Proyecto
+
+- **`src/views/`**: Contiene los componentes de cada sección (Home, About, Skills, Education, Experiences, Projects, Contact).
+- **`src/views/Navigation.js`**: Componente de barra de navegación.
+- **`src/App.js`**: Archivo principal que configura las rutas y utiliza React Router.
+
+### Configuración de las Rutas
+
+El archivo `src/App.js` utiliza React Router para manejar las rutas de la aplicación. A continuación, se describen las rutas disponibles:
+
+- `/portfolio/`: Página de inicio.
+- `/portfolio/about`: Página "Sobre Mí".
+- `/portfolio/skills`: Página de habilidades.
+- `/portfolio/education`: Página de educación.
+- `/portfolio/experiences`: Página de experiencias.
+- `/portfolio/projects`: Página de proyectos.
+- `/portfolio/contact`: Página de contacto.
+
+Puedes personalizar estas rutas según tus necesidades y agregar más rutas según sea necesario.
+
+### Dependencias Utilizadas
+
+- **`bootstrap`**: Se utiliza para estilos básicos. Importamos el archivo de estilo de Bootstrap en el archivo `src/App.js`.
+
+### Personalización
+
+Puedes personalizar cada componente en la carpeta `src/views/` para ajustar el contenido y la presentación según tus preferencias. Además, puedes personalizar la barra de navegación y agregar más secciones según tus necesidades.
+
