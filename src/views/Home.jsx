@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import '../assets/css/home.css';
+import Typewriter from 'typewriter-effect';
+
 
 const Home = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isMounted, setIsMounted] = useState(false);
 
     const icon_height = 70;
     const icon_width = 70;
@@ -28,48 +28,45 @@ const Home = () => {
     };
 
     useEffect(() => {
-        fetchData();
-        setIsMounted(true);
+        fetchData();   
     }, []);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % data.roles.length);
-        }, 2000);
-
-        return () => clearInterval(interval);
-    }, [data]);
 
     if (loading) return <div>Cargando...</div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className={`home-container ${isMounted ? 'fade-enter-active' : ''}`}>
+        <div className="home-container">
             <h1 className="home-name">{data.name}</h1>
-            <div className="home-roles">
-                {data.roles[currentIndex].split('').map((char, index) => (
-                    <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>
-                        {char}
-                    </span>
-                ))}
+            <div className="home-roles"> 
+            <Typewriter
+                options={{
+                    strings: data.roles,
+                    autoStart: true,
+                    loop: true,
+                    pauseFor: 2500,
+                    delay: 30, 
+                    deleteSpeed: 20
+                }}
+                />
             </div>
             <div className="social-icons">
                 <SocialIcon
-                    url="https://github.com/Leonardo-villagran"
+                    url={data.github}
                     target="_blank"
                     bgColor="black"
                     fgColor="white"
                     style={{ height: icon_height, width: icon_width }}
                 />
                 <SocialIcon
-                    url="https://www.linkedin.com/in/leonardo-villagran/"
+                    url={data.linkedin}
                     target="_blank"
                     bgColor="black"
                     fgColor="white"
                     style={{ height: icon_height, width: icon_width }}
                 />
                 <SocialIcon
-                    url="mailto:leonardovillagranchicago@gmail.com"
+                    url={`mailto:${data.email}`}
                     target="_blank"
                     bgColor="black"
                     fgColor="white"
