@@ -2,6 +2,8 @@
 
 Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto.
 
+Pueden ver el ejemplo en el siguiente enlace: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
+
 ## Índice
 
 - [Instrucciones de Uso](#instrucciones-de-uso)
@@ -13,6 +15,7 @@ Este es un ejemplo básico de una aplicación de portafolio utilizando React y R
 - [Dependencias Utilizadas](#dependencias-utilizadas)
 - [Personalización](#personalización)
 - [Configuración del sistema de contacto](#configuración-del-sistema-de-contacto)
+- [Cómo subir el portafolio a GitHub Pages](#cómo-subir-el-portafolio-a-github-pages)
 
 
 ### Instrucciones de Uso
@@ -94,3 +97,20 @@ Para configurar el sistema de contacto, sigue estos pasos:
 
 Con estos pasos, habrás configurado correctamente el sistema de contacto en tu aplicación. Este sistema utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
 
+### Cómo subir el portafolio a GitHub Pages
+
+Para llevar a cabo la publicación de tu portafolio en GitHub Pages, sigue estas indicaciones:
+
+1. Clona o descarga el repositorio desde GitHub.
+
+2. Asegúrate de que el nombre de tu repositorio sea "portfolio", de lo contrario, las rutas no funcionarán correctamente.
+
+3. En el archivo `package.json`, sustituye mi nombre de usuario de GitHub por el tuyo en la sección `homepage`.
+
+4. Una vez que hayas realizado todas las modificaciones necesarias, sube los cambios a GitHub y realiza la implementación con el siguiente comando:
+
+```bash
+npm run deploy
+```
+
+Siguiendo estos pasos, podrás desplegar tu portafolio en GitHub Pages de manera efectiva.
