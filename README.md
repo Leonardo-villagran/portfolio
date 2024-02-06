@@ -76,11 +76,21 @@ Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos
 
 ### Configuración del sistema de contacto
 
-    - Para configurar el sistema de contacto, debes crear una cuenta en [EmailJS](https://www.emailjs.com/) y obtener tu service ID, el template ID y el public user ID. No olvidar crear el template del email. Posteriormente debes crear un archivo `.env` en la raíz del proyecto y agregar las siguientes variables de entorno con los datos que obtuviste de EmailJS:
+Para configurar el sistema de contacto, sigue estos pasos:
 
-    ```bash
-        VITE_SERVICE_ID='service ID' 
-        VITE_TEMPLATE_ID='template ID'
-        VITE_USER_ID='user ID'
+1. Crea una cuenta en [EmailJS](https://www.emailjs.com/).
+
+2. Obtén tu service ID, template ID y public user ID de EmailJS. Asegúrate de crear el template del email necesario.
+
+3. Crea un archivo `.env` en la raíz del proyecto y agrega las siguientes variables de entorno con los datos obtenidos de EmailJS:
+
+    ```dotenv
+    VITE_SERVICE_ID='tu_service_ID'
+    VITE_TEMPLATE_ID='tu_template_ID'
+    VITE_USER_ID='tu_user_ID'
     ```
+
+   Asegúrate de reemplazar `'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'` con los valores específicos que obtuviste de EmailJS.
+
+Con estos pasos, habrás configurado correctamente el sistema de contacto en tu aplicación. Este sistema utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
 
