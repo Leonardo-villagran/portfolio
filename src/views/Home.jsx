@@ -14,7 +14,7 @@ const Home = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('json/home.json');
+            const response = await fetch('./json/home.json');
             if (!response.ok) {
                 throw new Error(`Error al cargar datos: ${response.statusText}`);
             }

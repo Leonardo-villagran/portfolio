@@ -12,6 +12,8 @@ Este es un ejemplo básico de una aplicación de portafolio utilizando React y R
 - [Configuración de las Rutas](#configuración-de-las-rutas)
 - [Dependencias Utilizadas](#dependencias-utilizadas)
 - [Personalización](#personalización)
+- [Configuración del sistema de contacto](#configuración-del-sistema-de-contacto)
+
 
 ### Instrucciones de Uso
 
@@ -72,7 +74,7 @@ Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos
 
    - Puedes editar estos archivos JSON (`home.json`, `about.json`, `skills.json`, etc.) para reflejar tus propios datos y detalles.
 
-### Configuración del sistema de contacto 
+### Configuración del sistema de contacto
 
     - Para configurar el sistema de contacto, debes crear una cuenta en [EmailJS](https://www.emailjs.com/) y obtener tu service ID, el template ID y el public user ID. No olvidar crear el template del email. Posteriormente debes crear un archivo `.env` en la raíz del proyecto y agregar las siguientes variables de entorno con los datos que obtuviste de EmailJS:
 
