@@ -71,3 +71,14 @@ Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos
    - Todos los contenidos de las secciones (Inicio, Sobre Mí, Habilidades, Educación, Experiencias, Proyectos, Contacto) están almacenados en archivos JSON dentro de la carpeta `public/json/`.
 
    - Puedes editar estos archivos JSON (`home.json`, `about.json`, `skills.json`, etc.) para reflejar tus propios datos y detalles.
+
+### Configuración del sistema de contacto 
+
+    - Para configurar el sistema de contacto, debes crear una cuenta en [EmailJS](https://www.emailjs.com/) y obtener tu service ID, el template ID y el public user ID. No olvidar crear el template del email. Posteriormente debes crear un archivo `.env` en la raíz del proyecto y agregar las siguientes variables de entorno con los datos que obtuviste de EmailJS:
+
+    ```bash
+        VITE_SERVICE_ID='service ID' 
+        VITE_TEMPLATE_ID='template ID'
+        VITE_USER_ID='user ID'
+    ```
+
