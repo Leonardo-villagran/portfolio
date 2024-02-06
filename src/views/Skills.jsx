@@ -36,19 +36,19 @@ const Skills = () => {
                         {skillsData.skills.map((category, index) => (
                             <div key={index} className="mb-4">
                                 <h3 className="text-center">{category.title}</h3>
-                                <div className="d-flex justify-content-center align-items-center">
+                                <Row className="d-flex justify-content-center align-items-center">
                                     {category.items.map((item, itemIndex) => (
-                                        <div key={itemIndex} className="text-center m-3">
+                                        <Col key={itemIndex} className="col-md-3 col-lg-1 text-center m-3">
                                             <img
                                                 src={item.icon}
                                                 alt="Foto"
                                                 className="img-fluid mb-2 me-4"
-                                                style={{ width: '60px', height: '60px', borderRadius: '50%' }}
+                                                style={{ width: '60px', height: '60px'}}
                                             />
                                             <p className="mb-0 me-4">{item.title}</p>
-                                        </div>
+                                        </Col>
                                     ))}
-                                </div>
+                                </Row>
                             </div>
                         ))}
                     </Col>
@@ -59,3 +59,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
