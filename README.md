@@ -13,8 +13,6 @@ Este es un ejemplo básico de una aplicación de portafolio utilizando React y R
 - [Dependencias Utilizadas](#dependencias-utilizadas)
 - [Personalización](#personalización)
 
-
-
 ### Instrucciones de Uso
 
 Sigue estos pasos para configurar y ejecutar la aplicación en tu entorno local.
@@ -66,5 +64,10 @@ Puedes personalizar estas rutas según tus necesidades y agregar más rutas seg�
 
 ### Personalización
 
-Puedes personalizar cada componente en la carpeta `src/views/` para ajustar el contenido y la presentación según tus preferencias. Además, puedes personalizar la barra de navegación y agregar más secciones según tus necesidades.
+Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos pasos:
 
+**Modificar Contenidos:**
+
+   - Todos los contenidos de las secciones (Inicio, Sobre Mí, Habilidades, Educación, Experiencias, Proyectos, Contacto) están almacenados en archivos JSON dentro de la carpeta `public/json/`.
+
+   - Puedes editar estos archivos JSON (`home.json`, `about.json`, `skills.json`, etc.) para reflejar tus propios datos y detalles.
