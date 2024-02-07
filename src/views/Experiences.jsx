@@ -70,19 +70,20 @@ const Education = () => {
                             theme={{
                                 primary: '#3d84c6', // Color de fondo de la línea de tiempo y del contenido
                                 secondary: 'white', // Color del punto de tiempo y de los detalles de la tarjeta
-                                cardBgColor: 'white', // Fondo de la tarjeta
+                                cardBgColor: '#1b1b1b', // Fondo de la tarjeta
                                 titleColor: '#808080', // Color del título de la tarjeta
                                 titleColorActive: '#007fff', // Color del subtítulo de la tarjeta
                                 cardForeColor: 'red',
                                 cardSubtitleColor: '#3d84c6',
-                                cardTitleColor: 'black'  
+                                cardTitleColor: 'white',
+                                cardDetailsColor: '#808080', // Color del texto de la tarjeta
 
                             }}
-                            className={{cardDetailedText: 'white'}}
 
+                            
                             fontSizes={{
                                 cardSubtitle: '1rem',
-                                cardText: '0.8rem',
+                                cardText: '1rem',
                                 cardTitle: '1.2rem',
                                 title: '0.8rem',
 

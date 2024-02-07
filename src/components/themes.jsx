@@ -28,7 +28,7 @@ export const theme = {
     accentColor: '#3D84C6',
     secondaryColor: 'white',
     chronoTheme: {
-        cardBgColor: '#494848',
+        cardBgColor: '#1b1b1b',
         cardForeColor: '#eee',
         titleColor: 'grey',
     },
