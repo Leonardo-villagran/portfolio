@@ -1,7 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import emailjs from '@emailjs/browser';
 import { Container, Alert, Spinner } from 'react-bootstrap';
 import '../assets/css/contact.css';
+import Context from "../Context/Context";
 
 const serviceId = import.meta.env.VITE_SERVICE_ID;
 const templateId = import.meta.env.VITE_TEMPLATE_ID;
@@ -21,13 +22,16 @@ const ContactForm = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const formRef = useRef();
+    const { language } = useContext(Context);
 
     const fetchData = async () => {
         try {
             setLoading(true); // Establece el estado de carga a true al inicio de la carga
-            const response = await fetch('json/contact.json');
+            let response;
+            if (language == 'es') response = await fetch('./json/contact.json');
+            else response = await fetch('./json/contact_en.json');
             if (!response.ok) {
-                throw new Error(`Error al cargar datos: ${response.statusText}`);
+                throw new Error(`Error: ${response.statusText}`);
             }
             const result = await response.json();
             setData(result);
@@ -42,7 +46,7 @@ const ContactForm = () => {
     };
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [language]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -54,15 +58,15 @@ const ContactForm = () => {
     const validateForm = () => {
         const errors = {};
         if (!formData.user_name.trim()) {
-            errors.user_name = 'Por favor, ingrese su nombre.';
+            errors.user_name = data.user_name_error;
         }
         if (!formData.user_email.trim()) {
-            errors.user_email = 'Por favor, ingrese su correo electrónico.';
+            errors.user_email = data.user_email_error;
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.user_email)) {
-            errors.user_email = 'Ingrese un correo electrónico válido.';
+            errors.user_email = data.user_email_error_valid;
         }
         if (!formData.message.trim()) {
-            errors.message = 'Por favor, ingrese su mensaje.';
+            errors.message = data.error_message;
         }
         setErrorMessages(errors);
         return Object.keys(errors).length === 0; // Devuelve true si no hay errores
@@ -77,11 +81,19 @@ const ContactForm = () => {
     };
 
     const showSuccessMessage = () => {
-        return showMessage('success', 'Mensaje enviado correctamente. ¡Muchas gracias!');
+        return showMessage('success', data.success_message);
     };
 
     const showErrorMessage = () => {
-        return showMessage('danger', 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.');
+        return showMessage('danger', data.danger_menssage);
+    };
+
+    const clearForm = () => {
+        setFormData({
+            user_name: '',
+            user_email: '',
+            message: '',
+        });
     };
 
     const handleSubmit = async (e) => {
@@ -94,12 +106,12 @@ const ContactForm = () => {
             try {
                 // Enviar el formulario mediante Email.js
                 const response = await emailjs.sendForm(serviceId, templateId, formRef.current, userId);
-                console.log('Correo electrónico enviado con éxito!', response);
+                console.log(data.response_success, response);
                 // Establecer el estado de respuesta para mostrar el mensaje de éxito
                 setResponseStatus(200);
-                // Puedes agregar lógica adicional después de enviar el correo electrónico
+                clearForm(); // Limpiar el formulario después de un envío exitoso
             } catch (error) {
-                console.error('Error al enviar el correo electrónico:', error);
+                console.error(data.reponse_error, error);
                 // Establecer el estado de respuesta para mostrar el mensaje de error
                 setResponseStatus(500);
             } finally {
@@ -108,7 +120,7 @@ const ContactForm = () => {
         }
     };
 
-    if (loading) return <div>Cargando...</div>;
+    if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
     //console.log('Datos cargados con éxito:', data);
 
@@ -165,7 +177,7 @@ const ContactForm = () => {
                         {isSubmitting ? (
                             <>
                                 <Spinner animation="border" size="sm" className="mr-2" />
-                                Enviando...
+                                Sending...
                             </>
                         ) : (
                             data.button

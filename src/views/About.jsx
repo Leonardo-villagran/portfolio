@@ -1,13 +1,18 @@
-import { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import { useState, useEffect, useContext } from 'react';
+import Context from "../Context/Context";
 
 const About = () => {
     const [aboutData, setAboutData] = useState(null);
+    const {language} = useContext(Context);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('./json/about.json'); // Ajusta la ruta del archivo JSON según tu estructura de carpetas
+                let response;
+                if (language=='es') response = await fetch('./json/about.json');
+                else response = await fetch('./json/about_en.json');
+                
                 if (!response.ok) {
                     throw new Error(`Error al cargar datos: ${response.statusText}`);
                 }
@@ -19,10 +24,10 @@ const About = () => {
         };
 
         fetchData();
-    }, []);
+    }, [language]);
 
     if (!aboutData) {
-        return <div>Cargando...</div>;
+        return <div>Loading...</div>;
     }
 
     return (

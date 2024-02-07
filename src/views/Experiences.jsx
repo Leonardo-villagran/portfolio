@@ -1,17 +1,22 @@
-import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Chrono } from 'react-chrono';
 import '../assets/css/education.css';
+import { useState, useEffect, useContext } from 'react';
+import Context from "../Context/Context";
 
 const Education = () => {
     const [educationData, setEducationData] = useState(null);
     const [width, setWidth] = useState('50vw');
     const [mode, setMode] = useState('VERTICAL');
+    
+    const {language} = useContext(Context);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('./json/experiences.json');
+                let response;
+                if (language=='es') response = await fetch('./json/experiences.json');
+                else response = await fetch('./json/experiences_en.json');
                 if (!response.ok) {
                     throw new Error(`Error al cargar datos: ${response.statusText}`);
                 }
@@ -31,17 +36,17 @@ const Education = () => {
                 } else {
                     setWidth('90vw');
                 }
-                console.log('width:', width);
+                //console.log('width:', width);
             } catch (error) {
                 console.error('Error al cargar datos:', error);
             }
         };
 
         fetchData();
-    }, [width]);
+    }, [width, language]);
 
     if (!educationData) {
-        return <div>Cargando...</div>;
+        return <div>Loading...</div>;
     }
 
     return (

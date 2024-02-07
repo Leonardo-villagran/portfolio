@@ -1,14 +1,14 @@
 {
-    "title": "Proyectos",
+    "title": "Projects",
     "projects": [
         {
             "image": "images/projects/biotik.jpg",
             "title": "Biotik - Web App",
             "bodyText": [
-                "Web principal de la empresa.",
-                "Frontend desarrollado en React-Vite.",
-                "Backend desarrollado en Express.",
-                "Datos obtenidos desde Postgres."
+                "Main website of the company.",
+                "Frontend developed in React-Vite.",
+                "Backend developed in Express.",
+                "Data obtained from Postgres."
             ],
             "links": [
                 {
@@ -31,11 +31,11 @@
         },
         {
             "image": "images/projects/gestion.jpg",
-            "title": "Biotik - ODK Gestión",
+            "title": "Biotik - ODK Management",
             "bodyText": [
-                "Sistema de gestión de usuarios y proyectos.",
-                "Visualización de proceso de proyectos a través de websockets.",
-                "Visualización de informes y mapas"
+                "User and project management system.",
+                "Visualization of project progress through websockets.",
+                "Visualization of reports and maps."
             ],
             "links": [
                 {
@@ -53,8 +53,8 @@
                 "Websockets",
                 "Postgres",
                 "GCP",
-                "Google drive",
-                "Google maps",
+                "Google Drive",
+                "Google Maps",
                 "Docker"
             ]
         },
@@ -62,8 +62,8 @@
             "image": "images/projects/process.jpg",
             "title": "Biotik - ODK Process",
             "bodyText": [
-                "Sistema de gestión de datos obtenidos desde servidor ODK Central.",
-                "Procesamiento de proyectos para generación de informes en Google Sheet."
+                "Data management system obtained from ODK Central server.",
+                "Project processing for report generation in Google Sheet."
             ],
             "links": [
                 {
@@ -90,10 +90,10 @@
             "image": "images/projects/comics.jpg",
             "title": "ComicsKites - Web App",
             "bodyText": [
-                "Web principal de una tienda virtual de cómics.",
-                "Frontend desarrollado en React-Vite.",
-                "Datos obtenidos desde base de datos Postgres.",
-                "Proyecto final de Desafío Latam."
+                "Main website of a virtual comic store.",
+                "Frontend developed in React-Vite.",
+                "Data obtained from Postgres database.",
+                "Final project of Desafío Latam."
             ],
             "links": [
                 {
@@ -115,10 +115,10 @@
             "image": "images/projects/chicagoasociados.jpg",
             "title": "Chicago Asesorias - Web App",
             "bodyText": [
-                "Web principal de la empresa.",
-                "Frontend desarrollado en React.",
-                "Datos obtenidos desde Json.",
-                "App implementada en Github Pages."
+                "Main website of the company.",
+                "Frontend developed in React.",
+                "Data obtained from Json.",
+                "App deployed on GitHub Pages."
             ],
             "links": [
                 {
@@ -138,12 +138,12 @@
         },
         {
             "image": "images/projects/pizza.jpg",
-            "title": "Pizzería - Web App",
+            "title": "Pizzeria - Web App",
             "bodyText": [
-                "Web principal de la empresa.",
-                "Frontend desarrollado en React.",
-                "Datos obtenidos desde Json.",
-                "App implementada en Netlify."
+                "Main website of the company.",
+                "Frontend developed in React.",
+                "Data obtained from Json.",
+                "App deployed on Netlify."
             ],
             "links": [
                 {
@@ -165,10 +165,10 @@
             "image": "images/projects/pokemon.jpg",
             "title": "Frontend PokeApi - Web App",
             "bodyText": [
-                "Web que obtiene pokemones desde un listado web.",
-                "Frontend desarrollado en React.",
-                "Datos obtenidos desde la PokeApi.",
-                "App implementada en Github Pages."
+                "Website that retrieves Pokémon from a web list.",
+                "Frontend developed in React.",
+                "Data obtained from the PokeApi.",
+                "App deployed on GitHub Pages."
             ],
             "links": [
                 {
@@ -188,3 +188,4 @@
         }
     ]
 }
+

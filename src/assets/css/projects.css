@@ -19,3 +19,6 @@
     /* Puedes cambiar esto al color de enlace deseado */
 }
 
+.small_text {
+    font-size: 0.9rem; /* ajusta este valor según sea necesario */
+}

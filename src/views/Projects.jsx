@@ -1,14 +1,18 @@
-import { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
 import '../assets/css/projects.css'; // Asegúrate de importar tu archivo CSS aquí
+import { useState, useEffect, useContext } from 'react';
+import Context from "../Context/Context";
 
 const Projects = () => {
     const [projectsData, setProjectsData] = useState(null);
+    const { language } = useContext(Context);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('./json/projects.json');
+                let response;
+                if (language === 'es') response = await fetch('./json/projects.json');
+                else response = await fetch('./json/projects_en.json');
                 if (!response.ok) {
                     throw new Error(`Error al cargar datos: ${response.statusText}`);
                 }
@@ -20,10 +24,10 @@ const Projects = () => {
         };
 
         fetchData();
-    }, []);
+    }, [language]);
 
     if (!projectsData) {
-        return <div>Cargando...</div>;
+        return <div>Loading...</div>;
     }
 
     return (
@@ -35,15 +39,14 @@ const Projects = () => {
                         <Card className="project-card border-white" style={{ height: '100%' }}>
                             <Card.Img variant="top" src={project.image} />
                             <Card.Body>
-                                <Card.Title> <strong>{project.title}</strong></Card.Title>
-                                <Card.Text className="project-text">
-                                    {project.bodyText.split('\n').map((line, lineIndex) => (
-                                        <p key={lineIndex}>{line}</p>
-                                    ))}
-                                </Card.Text>
+                                <Card.Title><strong>{project.title}</strong></Card.Title>
+                                    <ul className='p-2 small_text'>
+                                        {project.bodyText.map((line, lineIndex) => (
+                                            <li className='pt-2' key={lineIndex}>{line}</li>
+                                        ))}
+                                    </ul>
                             </Card.Body>
-                            <Card.Footer className="text-center project-list-group" >
-
+                            <Card.Footer className="text-center project-list-group">
                                 <div className="d-flex justify-content-center align-items-center flex-wrap">
                                     {project.links.map((link, linkIndex) => (
                                         <a
@@ -58,7 +61,7 @@ const Projects = () => {
                                         </a>
                                     ))}
                                 </div>
-                                <div className="d-flex justify-content-center align-items-center flex-wrap pt-4" >
+                                <div className="d-flex justify-content-center align-items-center flex-wrap pt-4">
                                     {project.tags.map((tag, tagIndex) => (
                                         <Badge
                                             key={tagIndex}

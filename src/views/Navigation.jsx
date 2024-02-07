@@ -1,57 +1,62 @@
-
 import { Link } from 'react-router-dom';
-import { Navbar, Nav } from 'react-bootstrap';
-import { useState, useEffect } from 'react';
-
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { useContext, useState } from 'react';
+import Context from "../Context/Context";
+import '../assets/css/navigation.css'; // Importa el archivo de estilos CSS donde definiste la clase personalizada
 
 const Navigation = () => {
+    const { setLanguage, menu } = useContext(Context);
+    const [expanded, setExpanded] = useState(false);
 
-    const [cvData, setCvData] = useState(null);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('./json/cv.json');
-                if (!response.ok) {
-                    throw new Error(`Error al cargar datos: ${response.statusText}`);
-                }
-                const data = await response.json();
-                setCvData(data);
-            } catch (error) {
-                console.error('Error al cargar datos:', error);
-            }
-        };
-        fetchData();
-    }, []);
+    const handleToggle = () => {
+        setExpanded(!expanded);
+    };
+
+    const handleLanguageChange = (language) => {
+        localStorage.setItem('language', language);
+        setLanguage(language);
+    };
 
     return (
-        <Navbar bg="dark" variant="dark" expand="md" >
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar bg="dark" variant="dark" expand="md" expanded={expanded}>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mx-auto">
-                    <Nav.Link as={Link} to="/portfolio/">
-                        Home
+                <Nav className="ml-auto">
+                    <Nav.Link as={Link} to="/portfolio/" className={expanded ? 'collapsed-menu-item' : ''}>
+                        {menu.home}
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/portfolio/about">
-                        Sobre mi
+                    <Nav.Link as={Link} to="/portfolio/about" className={expanded ? 'collapsed-menu-item' : ''}>
+                        {menu.about}
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/portfolio/skills">
-                        Stack
+                    <Nav.Link as={Link} to="/portfolio/skills" className={expanded ? 'collapsed-menu-item' : ''}>
+                        {menu.skills}
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/portfolio/education">
-                        Educación
+                    <Nav.Link as={Link} to="/portfolio/education" className={expanded ? 'collapsed-menu-item' : ''}>
+                        {menu.education}
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/portfolio/experiences">
-                        Experiencia
+                    <Nav.Link as={Link} to="/portfolio/experiences" className={expanded ? 'collapsed-menu-item' : ''}>
+                        {menu.experiences}
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/portfolio/projects">
-                        Proyectos
+                    <Nav.Link as={Link} to="/portfolio/projects" className={expanded ? 'collapsed-menu-item' : ''}>
+                        {menu.projects}
                     </Nav.Link>
-                    <Nav.Link href={cvData ? cvData.link : '#'} target="_blank" rel="noopener noreferrer" className="nav-link-custom-color">
-                    {cvData ? cvData.title : 'Curriculum'}
+                    <Nav.Link href={menu.resume[0].link} target="_blank" rel="noopener noreferrer" className={`nav-link-custom-color ${expanded ? 'collapsed-menu-item' : ''}`}>
+                        {menu.resume[0].title}
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/portfolio/contact">
-                        Contacto
+                    <Nav.Link as={Link} to="/portfolio/contact" className={expanded ? 'collapsed-menu-item' : ''}>
+                        {menu.contact}
                     </Nav.Link>
+                </Nav>
+                <Nav>
+                    <NavDropdown title={menu.language} id="basic-nav-dropdown">
+                        <NavDropdown.Item onClick={() => handleLanguageChange('en')}>
+                            English
+                        </NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => handleLanguageChange('es')}>
+                            Español
+                        </NavDropdown.Item>
+                        {/* Agrega más opciones de idioma según sea necesario */}
+                    </NavDropdown>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

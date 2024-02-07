@@ -1,20 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import '../assets/css/home.css';
 import Typewriter from 'typewriter-effect';
-
+import Context from "../Context/Context";
 
 const Home = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const {language} = useContext(Context);
+
     const icon_height = 70;
     const icon_width = 70;
 
     const fetchData = async () => {
         try {
-            const response = await fetch('./json/home.json');
+            let response;
+            if (language=='es') response = await fetch('./json/home.json');
+            else response = await fetch('./json/home_en.json');
             if (!response.ok) {
                 throw new Error(`Error al cargar datos: ${response.statusText}`);
             }
@@ -29,10 +33,10 @@ const Home = () => {
 
     useEffect(() => {
         fetchData();   
-    }, []);
+    }, [language]);
 
 
-    if (loading) return <div>Cargando...</div>;
+    if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
