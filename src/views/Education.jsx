@@ -77,7 +77,7 @@ const Education = () => {
                                 cardSubtitle: '1rem',
                                 cardText: '1rem',
                                 cardTitle: '1.5rem',
-                                title: '1.2rem',
+                                title: '1rem',
                                 
                             }}
                     

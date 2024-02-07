@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { Container, Alert, Spinner } from 'react-bootstrap';
 import '../assets/css/contact.css';
 
@@ -31,8 +31,8 @@ const ContactForm = () => {
             }
             const result = await response.json();
             setData(result);
-           
-            // setLoading(false); // Cambiado a continuación para garantizar que setLoading se establezca en false, incluso si hay un error.
+
+            // setLoading(false); /n/ Cambiado a continuación para garantizar que setLoading se establezca en false, incluso si hay un error.
         } catch (err) {
             setLoading(false);
             setError(err.message);
