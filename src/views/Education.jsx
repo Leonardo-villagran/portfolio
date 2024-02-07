@@ -71,20 +71,24 @@ const Education = () => {
                             items={educationData.education}
                             cardHeight={90}
                             theme={{
-                                primary: theme.accentColor,
-                                secondary: theme.secondaryColor,
-                                cardBgColor: theme.chronoTheme.cardBgColor,
-                                cardForeColor: theme.chronoTheme.cardForeColor,
-                                titleColor: theme.chronoTheme.titleColor,
-                                cardSubtitleColor: theme.accentColor,
-                                cardTitleColor: theme.secondaryColor,
+                                primary: '#3d84c6', // Color de fondo de la línea de tiempo y del contenido
+                                secondary: 'white', // Color del punto de tiempo y de los detalles de la tarjeta
+                                cardBgColor: 'white', // Fondo de la tarjeta
+                                titleColor: '#808080', // Color del título de la tarjeta
+                                titleColorActive: '#007fff', // Color del subtítulo de la tarjeta
+                                cardForeColor: 'red',
+                                cardSubtitleColor: '#3d84c6',
+                                cardTitleColor: 'black'  
+
                             }}
+                            className={{cardDetailedText: 'white'}}
+
                             fontSizes={{
                                 cardSubtitle: '1rem',
-                                cardText: '1rem',
-                                cardTitle: '1.5rem',
-                                title: '1rem',
-                                
+                                cardText: '0.8rem',
+                                cardTitle: '1.2rem',
+                                title: '0.8rem',
+
                             }}
                     
                         >
