@@ -48,14 +48,13 @@ const Navigation = () => {
                     </Nav.Link>
                 </Nav>
                 <Nav>
-                    <NavDropdown title={menu.language} id="basic-nav-dropdown">
+                    <NavDropdown title={menu.language} id="basic-nav-dropdown" >
                         <NavDropdown.Item onClick={() => handleLanguageChange('en')}>
-                            English
+                            <span className='small_text'>English</span>
                         </NavDropdown.Item>
                         <NavDropdown.Item onClick={() => handleLanguageChange('es')}>
-                            Español
+                            <span className='small_text'>Español</span>
                         </NavDropdown.Item>
-                        {/* Agrega más opciones de idioma según sea necesario */}
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>

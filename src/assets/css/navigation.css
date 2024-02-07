@@ -1,3 +1,6 @@
 .collapsed-menu-item {
     margin-left: 20px; /* Puedes ajustar este valor según tu preferencia */
 }
+.small_text{
+    font-size: 0.8em;
+}
