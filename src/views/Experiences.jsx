@@ -76,14 +76,16 @@ const Education = () => {
                                 cardForeColor: 'red',
                                 cardSubtitleColor: '#3d84c6',
                                 cardTitleColor: 'white',
-                                cardDetailedText: 'white'
+                                cardDetailedText: 'white',
+                                CardContentDetails:'white',
+                                CardlineSubContent:'white'
 
                             }}
                             fontSizes={{
                                 cardSubtitle: '1rem',
                                 cardText: '1rem',
                                 cardTitle: '1.5rem',
-                                title: '1rem',
+                                title: '0.8rem',
 
                             }}
 
