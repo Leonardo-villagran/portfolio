@@ -21,7 +21,7 @@ const Navigation = () => {
         <Navbar bg="dark" variant="dark" expand="md" expanded={expanded}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ml-auto">
+                <Nav className={`mx-auto ${expanded ? '' : 'justify-content-center'}`}>
                     <Nav.Link as={Link} to="/portfolio/" className={expanded ? 'collapsed-menu-item' : ''}>
                         {menu.home}
                     </Nav.Link>
@@ -64,3 +64,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
