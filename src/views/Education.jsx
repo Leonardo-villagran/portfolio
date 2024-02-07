@@ -73,7 +73,7 @@ const Education = () => {
                             theme={{
                                 primary: '#3d84c6', // Color de fondo de la línea de tiempo y del contenido
                                 secondary: 'white', // Color del punto de tiempo y de los detalles de la tarjeta
-                                cardBgColor: 'white', // Fondo de la tarjeta
+                                cardBgColor: '#000000', // Fondo de la tarjeta
                                 titleColor: '#808080', // Color del título de la tarjeta
                                 titleColorActive: '#007fff', // Color del subtítulo de la tarjeta
                                 cardForeColor: 'red',
