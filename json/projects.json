@@ -160,6 +160,31 @@
                 "Json",
                 "Netlify"
             ]
+        },{
+            "image": "images/projects/portfolio.jpg",
+            "title": "Portafolio - Web App",
+            "bodyText": [
+                "Portafolio personal en inglés y/o español.",
+                "Frontend desarrollado en React-Vite.",
+                "Permite personalizar a través de archivos json.",
+                "App implementada en Github Pages."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/portfolio"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/portfolio/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Vite",
+                "Json",
+                "Github Pages"
+            ]
         },
         {
             "image": "images/projects/pokemon.jpg",
