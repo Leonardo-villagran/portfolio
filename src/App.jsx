@@ -10,34 +10,43 @@ import Projects from './views/Projects';
 import Navigation from './views/Navigation';
 import Contact from './views/Contact';
 import Context from "./Context/Context";
+import { determineLanguage } from './utils/language';
 
 function App() {
 
   const [menu, setMenu] = useState([]);
   const [menuLoaded, setMenuLoaded] = useState(false);
-  const [language, setLanguage] = useState('es'); // Asociar 'es' al estado language
-
+  const [language, setLanguage] = useState('');
 
   useEffect(() => {
-    // Obtener el idioma del localStorage, si está disponible, y establecerlo si aún no se ha establecido
-
-    const fetchMenu = async () => {
-
-      const localStorageLanguage = localStorage.getItem('language');
-      if (localStorageLanguage) {
-        // Si el local storage tiene un idioma válido, lo establecemos en el estado
-        setLanguage(localStorageLanguage);
-      } else {
-        // Si el local storage está vacío o tiene un valor inválido, lo guardamos en el local storage
-        localStorage.setItem('language', language);
-      }
-
+    const fetchAppData = async () => {
       try {
+        const response = await fetch('./json/app.json');
+        if (!response.ok) {
+          throw new Error(`Failed to fetch app data: ${response.statusText}`);
+        }
+        const data = await response.json();
+        const idioma = determineLanguage(data);
+        setLanguage(idioma);
 
+        // Actualiza el idioma en el almacenamiento local si aún no está establecido
+        const localStorageLanguage = localStorage.getItem('language');
+        if (!localStorageLanguage) {
+          localStorage.setItem('language', idioma);
+        }
+      } catch (error) {
+        console.error('Error fetching app data:', error);
+      }
+    };
+    fetchAppData();
+  }, []);
+
+  useEffect(() => {
+    const fetchMenu = async () => {
+      try {
         let response;
-        if (language=='es') response = await fetch('./json/menu.json');
+        if (language === 'es') response = await fetch('./json/menu.json');
         else response = await fetch('./json/menu_en.json');
-        
 
         if (!response.ok) {
           throw new Error(`Error al cargar datos: ${response.statusText}`);
@@ -50,18 +59,15 @@ function App() {
       }
     };
     fetchMenu();
+  }, [language]);
 
-
-  }, [language]); // Agregar selectedLanguage como una dependencia para que se verifique cuando cambie
-
-
+  //console.log(language);
   const globalState = { language, setLanguage, menu, setMenu };
 
   return (
     <Context.Provider value={globalState}>
-      {menuLoaded && ( // Esperar a que se cargue el menú antes de renderizar Navigation
-
-        <Router >
+      {menuLoaded && (
+        <Router>
           <Navigation />
           <Routes>
             <Route path="/portfolio/" element={<Home />} />
@@ -78,4 +84,5 @@ function App() {
     </Context.Provider>
   );
 }
-export default App
+export default App;
+

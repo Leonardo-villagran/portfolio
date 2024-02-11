@@ -1,6 +1,6 @@
 ## React Portfolio Website
 
-Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto.
+Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes en inglés y español. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
 
 Pueden ver el ejemplo en el siguiente enlace: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
 
@@ -45,13 +45,14 @@ La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000]
 
 ### Estructura del Proyecto
 
-- **`src/views/`**: Contiene los componentes de cada sección (Home, About, Skills, Education, Experiences, Projects, Contact).
-- **`src/views/Navigation.js`**: Componente de barra de navegación.
-- **`src/App.js`**: Archivo principal que configura las rutas y utiliza React Router.
+- **`src/views/`**: Contiene las vistas de cada sección (Home, About, Skills, Education, Experiences, Projects, Contact).
+- **`src/views/Navigation.js`**: Vista de barra de navegación.
+- **`src/App.jsx`**: Archivo principal que configura las rutas y utiliza React Router.
+- Cada vista posee un componente con el mismo nombre. Si desean agregar más cosas a la vista pueden hacerlo sin tocar el componente. La idea es que las vistas solo sean un conjunto de componentes. 
 
 ### Configuración de las Rutas
 
-El archivo `src/App.js` utiliza React Router para manejar las rutas de la aplicación. A continuación, se describen las rutas disponibles:
+El archivo `src/App.jsx` utiliza React Router para manejar las rutas de la aplicación. A continuación, se describen las rutas disponibles:
 
 - `/portfolio/`: Página de inicio.
 - `/portfolio/about`: Página "Sobre Mí".
@@ -65,7 +66,7 @@ Puedes personalizar estas rutas según tus necesidades y agregar más rutas seg�
 
 ### Dependencias Utilizadas
 
-- **`bootstrap`**: Se utiliza para estilos básicos. Importamos el archivo de estilo de Bootstrap en el archivo `src/App.js`.
+- **`bootstrap`**: Se utiliza para estilos básicos. Importamos el archivo de estilo de Bootstrap en el archivo `src/App.jsx`.
 
 ### Personalización
 
@@ -75,7 +76,21 @@ Si deseas personalizar y adaptar este portafolio para tu propio uso, sigue estos
 
    - Todos los contenidos de las secciones (Inicio, Sobre Mí, Habilidades, Educación, Experiencias, Proyectos, Contacto) están almacenados en archivos JSON dentro de la carpeta `public/json/`.
 
+   - Lo primero es determinar en que idioma estará tu portafolio. El idioma se configura en el archivo llamado `public/json/app.json`. Si se coloca en español e inglés a la vez, aparecerá formulario de selección de idioma en la barra de navegación. Si solo hay un idioma, la web se desplegará en ese idioma y no se mostrará el selector. 
+
+
+```json
+{
+    "portfolioLanguages": {
+        "spanish": true,
+        "english": true
+    }
+}
+```      
+
    - Puedes editar estos archivos JSON (`home.json`, `about.json`, `skills.json`, etc.) para reflejar tus propios datos y detalles.
+
+   -Los archivos en español tienen el nombre base, los archivos en inglés tienen el nombre base seguido de `_en`. Por ejemplo, `home.json` y `home_en.json`.
 
 ### Configuración del sistema de contacto
 
