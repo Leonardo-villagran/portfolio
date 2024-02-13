@@ -185,8 +185,26 @@
             "JSON",
             "Github Pages"
             ]
+            },{
+                "image": "images/projects/postgres.jpg",
+                "title": "PostgreSQL with Docker",
+                "bodyText": [
+                    "Docker Compose for PostgreSQL.",
+                    "Allows to deploy a PostgreSQL server.",
+                    "Configuration can be customized through docker-compose.yml and environment variables."
+                ],
+                "links": [
+                    {
+                        "text": "GitHub",
+                        "href": "https://github.com/Leonardo-villagran/postgres_normal"
+                    }
+                ],
+                "tags": [
+                    "Docker",
+                    "Docker Compose",
+                    "PostgreSQL"
+                ]
             },
-        
         {
             "image": "images/projects/pokemon.jpg",
             "title": "Frontend PokeApi - Web App",

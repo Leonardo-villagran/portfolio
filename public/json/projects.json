@@ -187,6 +187,26 @@
             ]
         },
         {
+            "image": "images/projects/postgres.jpg",
+            "title": "PostgreSQL desde Docker",
+            "bodyText": [
+                "Docker Compose de PostgreSQL.",
+                "Permite levantar un servidor de PostgreSQL.",
+                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/postgres_normal"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "PostgresSQL"
+            ]
+        },
+        {
             "image": "images/projects/pokemon.jpg",
             "title": "Frontend PokeApi - Web App",
             "bodyText": [
