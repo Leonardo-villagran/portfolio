@@ -15,6 +15,9 @@ Pueden ver el ejemplo en el siguiente enlace: [https://leonardo-villagran.github
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Configuración de las Rutas](#configuración-de-las-rutas)
 - [Dependencias Utilizadas](#dependencias-utilizadas)
+    - [Dependencias](#dependencias)
+    - [Dependencias de desarrollo (devDependencies)](#dependencias-de-desarrollo-devdependencies)
+
 - [Personalización](#personalización)
 - [Configuración del sistema de contacto](#configuración-del-sistema-de-contacto)
 - [Cómo subir el portafolio a GitHub Pages](#cómo-subir-el-portafolio-a-github-pages)
