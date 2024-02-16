@@ -4,6 +4,8 @@ Este es un ejemplo básico de una aplicación de portafolio utilizando React y R
 
 Pueden ver el ejemplo en el siguiente enlace: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
 
+![alt text](public/images/cap_spanish.jpg)
+
 ## Índice
 
 - [Instrucciones de Uso](#instrucciones-de-uso)
@@ -26,8 +28,8 @@ Sigue estos pasos para configurar y ejecutar la aplicación en tu entorno local.
 #### 1. Clonar el Repositorio
 
 ```bash
-git clone https://tu-repositorio.git
-cd tu-repositorio
+git clone https://github.com/Leonardo-villagran/portfolio
+cd portfolio
 ```
 
 #### 2. Instalar Dependencias
@@ -42,14 +44,14 @@ npm install
 npm run dev
 ```
 
-La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para verla.
+La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/portfolio/](http://localhost:3000/portfolio/) en tu navegador para verla.
 
 ### Estructura del Proyecto
 
 - **`src/views/`**: Contiene las vistas de cada sección (Home, About, Skills, Education, Experiences, Projects, Contact).
-- **`src/views/Navigation.js`**: Vista de barra de navegación.
-- **`src/App.jsx`**: Archivo principal que configura las rutas y utiliza React Router.
+- **`src/components/`** Contiene los componentes con el código de programación de Home, About, Skills, Education, Experiences, Projects, Contact.
 - Cada vista posee un componente con el mismo nombre. Si desean agregar más cosas a la vista pueden hacerlo sin tocar el componente. La idea es que las vistas solo sean un conjunto de componentes. 
+- **`src/App.jsx`**: Archivo principal que configura las rutas y utiliza React Router.
 
 ### Configuración de las Rutas
 
@@ -65,9 +67,76 @@ El archivo `src/App.jsx` utiliza React Router para manejar las rutas de la aplic
 
 Puedes personalizar estas rutas según tus necesidades y agregar más rutas según sea necesario.
 
-### Dependencias Utilizadas
+Estas son las dependencias más importantes listadas en el archivo `package.json` y su propósito en el proyecto:
 
-- **`bootstrap`**: Se utiliza para estilos básicos. Importamos el archivo de estilo de Bootstrap en el archivo `src/App.jsx`.
+### Dependencias utilizadas:
+
+#### Dependencias:
+
+1. **@emailjs/browser**:
+   - Esta es una biblioteca que permite enviar correos electrónicos directamente desde el navegador utilizando JavaScript.
+
+2. **axios**:
+   - Axios es un cliente HTTP basado en Promesas que se utiliza para realizar solicitudes HTTP, como solicitudes GET, POST, etc.
+
+3. **bootstrap**:
+   - Bootstrap es un marco de trabajo de diseño front-end popular que proporciona una estructura y componentes predefinidos para desarrollar rápidamente interfaces de usuario atractivas y receptivas.
+
+4. **react**:
+   - React es una biblioteca de JavaScript de código abierto utilizada para construir interfaces de usuario (UI) interactivas de una sola página.
+
+5. **react-bootstrap**:
+   - React Bootstrap es una versión de Bootstrap reescrita para React. Proporciona componentes de interfaz de usuario de Bootstrap como componentes React.
+
+6. **react-chrono**:
+   - React Chrono es una biblioteca para crear líneas de tiempo interactivas y visualmente atractivas en aplicaciones web de React.
+
+7. **react-dom**:
+   - React DOM es un paquete que proporciona métodos específicos para manipular el DOM de HTML en aplicaciones web de React.
+
+8. **react-hook-form**:
+   - React Hook Form es una biblioteca de React que se utiliza para gestionar formularios de manera eficiente y sencilla mediante el uso de ganchos (hooks).
+
+9. **react-router-dom**:
+   - React Router DOM es una biblioteca que proporciona navegación y enrutamiento declarativos para aplicaciones web de React.
+
+10. **react-social-icons**:
+    - React Social Icons es una biblioteca que proporciona iconos sociales predefinidos para su uso en aplicaciones web de React.
+
+11. **serve**:
+    - Serve es un servidor HTTP estático simple que se utiliza principalmente para servir archivos estáticos locales durante el desarrollo de aplicaciones web.
+
+12. **typewriter-effect**:
+    - Typewriter Effect es una biblioteca que permite simular el efecto de escritura de una máquina de escribir en aplicaciones web.
+
+#### Dependencias de desarrollo (devDependencies):
+
+1. **@types/react**:
+   - Este paquete proporciona definiciones de tipo TypeScript para React.
+
+2. **@types/react-dom**:
+   - Este paquete proporciona definiciones de tipo TypeScript para React DOM.
+
+3. **@vitejs/plugin-react-swc**:
+   - Este es un complemento para Vite, un entorno de desarrollo rápido para JavaScript y TypeScript. Ayuda a cargar archivos React utilizando el SWC (Compilador de JavaScript de Estándares Web).
+
+4. **eslint**:
+   - ESLint es una herramienta de linting para JavaScript que ayuda a identificar y corregir problemas en el código.
+
+5. **eslint-plugin-react**:
+   - Este es un complemento de ESLint que proporciona reglas específicas para proyectos de React.
+
+6. **eslint-plugin-react-hooks**:
+   - Este es un complemento de ESLint que proporciona reglas específicas para los ganchos (hooks) de React.
+
+7. **eslint-plugin-react-refresh**:
+   - Este es un complemento de ESLint que proporciona soporte para la recarga de React.
+
+8. **gh-pages**:
+   - Gh-pages es una herramienta que facilita la implementación de aplicaciones web en GitHub Pages.
+
+9. **vite**:
+   - Vite es un entorno de desarrollo rápido para proyectos de JavaScript y TypeScript que se basa en ESM (Módulos de JavaScript Estándar).
 
 ### Personalización
 
@@ -170,3 +239,5 @@ Siguiendo estos pasos, podrás desplegar tu portafolio en GitHub Pages de manera
 ![link](public/images/link.jpg)
 
 Con estos pasos, ya podrás acceder a tu portafolio desde Render.
+
+![alt text](public/images/cap_english.jpg)
