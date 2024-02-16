@@ -103,9 +103,9 @@ Para configurar el sistema de contacto, sigue estos pasos:
 3. Crea un archivo `.env` en la raíz del proyecto y agrega las siguientes variables de entorno con los datos obtenidos de EmailJS:
 
     ```dotenv
-    VITE_SERVICE_ID='tu_service_ID'
-    VITE_TEMPLATE_ID='tu_template_ID'
-    VITE_USER_ID='tu_user_ID'
+    VITE_SERVICE_ID=tu_service_ID
+    VITE_TEMPLATE_ID=tu_template_ID
+    VITE_USER_ID=tu_user_ID
     ```
 
    Asegúrate de reemplazar `'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'` con los valores específicos que obtuviste de EmailJS.
@@ -122,6 +122,8 @@ Para llevar a cabo la publicación de tu portafolio en GitHub Pages, sigue estas
 
 3. En el archivo `package.json`, sustituye mi nombre de usuario de GitHub por el tuyo en la sección `homepage`.
 
+4. Para poder usar la sección de contacto a través de GitHub Pages, debes ingresar las variables de entorno al repositorio (`'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'`) a la sección `Settings>Environments>github-pages>` y en la sección `Environment secrets` ingresar cada variable con el contenido asociado a través del botón `Add secret`. 
+
 4. Una vez que hayas realizado todas las modificaciones necesarias, sube los cambios a GitHub y realiza la implementación con el siguiente comando:
 
 ```bash
@@ -129,3 +131,41 @@ npm run deploy
 ```
 
 Siguiendo estos pasos, podrás desplegar tu portafolio en GitHub Pages de manera efectiva.
+
+### Cómo subir a render.com
+
+1. Ingresar a render.com.
+
+2. Conectarse a Render a través de GitHub.
+
+![Render](public/images/render.jpg)
+
+3. Accede al Dashboard y haz clic en el botón llamado `New +`, luego selecciona "Web service".
+
+![Render new](public/images/render_new.jpg)
+
+4. Debes dar permisos y seleccionar el proyecto desde GitHub. 
+
+![Repo](public/images/repo.jpg)
+
+5. Una vez seleccionado el proyecto /portfolio, configura el proyecto; primero escribe un nombre y luego selecciona el runtime como Node o Docker. En este caso, lo realizaré con Node. 
+
+![Node](public/images/node.jpg)
+
+6. Para instalar y construir, puedes dejar la configuración por defecto. Para iniciar el servicio, utiliza `npm run serve` u otro comando que consideres mejor.
+
+![Serve](public/images/serve.jpg)
+
+7. Seleccionar la instancia Free (si no quieres pagar). Luego bajen y verán una sección llamada `Environment Variables` (si no se ve presionen el botón `advanced` y la encontrarás allí). Puedes ingresar las variables de entorno una a una o copiarlas todas dentro de la sección llamada `Add from .env`
+
+![env](public/images/env4.jpg)
+
+8. Luego presionan el botón llamado `Create Web Service` y espera a que se ejecute el deploy. Si hay errores, debes corregir el problema y volver a ejecutar el deploy. En caso de que se realicen cambios en el repositorio de GitHub, se realizará el deploy nuevamente de forma automática.
+
+![DashBoard](public/images/dash.jpg)
+
+9. Para poder acceder a la web, haz clic sobre el nombre del proyecto en el Dashboard y presiona sobre la dirección que aparece debajo del repositorio de GitHub.
+
+![link](public/images/link.jpg)
+
+Con estos pasos, ya podrás acceder a tu portafolio desde Render.
