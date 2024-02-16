@@ -16,6 +16,7 @@ Pueden ver el ejemplo en el siguiente enlace: [https://leonardo-villagran.github
 - [Personalización](#personalización)
 - [Configuración del sistema de contacto](#configuración-del-sistema-de-contacto)
 - [Cómo subir el portafolio a GitHub Pages](#cómo-subir-el-portafolio-a-github-pages)
+- [Cómo subir a render.com](#cómo-subir-a-rendercom)
 
 
 ### Instrucciones de Uso
