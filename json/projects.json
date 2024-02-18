@@ -207,6 +207,32 @@
             ]
         },
         {
+            "image": "images/projects/cuidadoras.jpg",
+            "title": "Cuidadoras - Web App",
+            "bodyText": [
+                "Web sobre cuidadoras de pacientes en sus hogares.",
+                "Frontend desarrollado en React.",
+                "Datos obtenidos desde Json|.",
+                "App implementada en Github Pages."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/cuidadoras"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/cuidadoras/"
+                }
+            ],
+            "tags": [
+                "React",
+                "Typescript",
+                "Json",
+                "Github Pages"
+            ]
+        },
+        {
             "image": "images/projects/pokemon.jpg",
             "title": "Frontend PokeApi - Web App",
             "bodyText": [

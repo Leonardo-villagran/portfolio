@@ -204,7 +204,32 @@
                     "Docker Compose",
                     "PostgreSQL"
                 ]
-            },
+            },{
+                "image": "images/projects/cuidadoras.jpg",
+                "title": "Cuidadoras - Web App",
+                "bodyText": [
+                "A website about home caregivers for patients.",
+                "Frontend developed in React.",
+                "Data obtained from JSON.",
+                "App deployed on Github Pages."
+                ],
+                "links": [
+                {
+                "text": "GitHub",
+                "href": "https://github.com/Leonardo-villagran/cuidadoras"
+                },
+                {
+                "text": "Live",
+                "href": "https://leonardo-villagran.github.io/cuidadoras/"
+                }
+                ],
+                "tags": [
+                "React",
+                "TypeScript",
+                "JSON",
+                "GitHub Pages"
+                ]
+                },
         {
             "image": "images/projects/pokemon.jpg",
             "title": "Frontend PokeApi - Web App",
