@@ -22,7 +22,7 @@ export default function Chronox(props) {
                 theme={{
                      primary: 'black', // Color de fondo de la línea de tiempo y del contenido
                     secondary: 'black', // Color del punto de tiempo y de los detalles de la tarjeta
-                    cardBgColor: '#d9d4d4', // Fondo de la tarjeta
+                    cardBgColor: '#f3f3f3', // Fondo de la tarjeta
                     titleColor: '#3d84c6', // Color del título de la tarjeta
                     titleColorActive: '#007fff', // Color del subtítulo de la tarjeta
                     cardForeColor: 'red',
