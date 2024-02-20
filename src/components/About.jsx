@@ -1,10 +1,11 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useState, useEffect, useContext } from 'react';
 import Context from "../Context/Context";
+import '../assets/css/about.css';
 
 const About = () => {
     const [aboutData, setAboutData] = useState(null);
-    const {language} = useContext(Context);
+    const {language, theme } = useContext(Context);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -35,7 +36,7 @@ const About = () => {
             <h2 className="mt-4 mb-4 text-center">{aboutData.title}</h2>
             <Row>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                    <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body>
                             {/* Contenido de la columna izquierda (texto) */}
                             <p style={{ textAlign: 'justify' }}>{aboutData.about}</p>
@@ -43,7 +44,7 @@ const About = () => {
                     </Card>
                 </Col>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body className="d-flex align-items-center justify-content-center">
                             {/* Contenido de la columna derecha (foto) */}
                             <img
@@ -58,7 +59,7 @@ const About = () => {
             </Row>
             <Row>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body>
                             {/* Contenido de la columna izquierda (texto) */}
                             <p style={{ textAlign: 'justify' }}>{aboutData.family}</p>
@@ -66,7 +67,7 @@ const About = () => {
                     </Card>
                 </Col>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body className="d-flex align-items-center justify-content-center">
                             {/* Contenido de la columna derecha (foto) */}
                             <img
@@ -81,7 +82,7 @@ const About = () => {
             </Row>
             <Row>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body>
                             {/* Contenido de la columna izquierda (texto) */}
                             <p style={{ textAlign: 'justify' }}>{aboutData.sport}</p>
@@ -89,7 +90,7 @@ const About = () => {
                     </Card>
                 </Col>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body className="d-flex align-items-center justify-content-center">
                             {/* Contenido de la columna derecha (foto) */}
                             <img
@@ -104,7 +105,7 @@ const About = () => {
             </Row>
             <Row>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body>
                             {/* Contenido de la columna izquierda (texto) */}
                             <p style={{ textAlign: 'justify' }}>{aboutData.hobbie}</p>
@@ -112,7 +113,7 @@ const About = () => {
                     </Card>
                 </Col>
                 <Col sm={12} md={6} className="mx-auto mb-4">
-                    <Card className="border-black" style={{ backgroundColor: 'black', color: 'white', height: '100%' }}>
+                <Card className={`card-custom ${theme === 'light' ? 'light' : 'dark'}`}>
                         <Card.Body className="d-flex align-items-center justify-content-center">
                             {/* Contenido de la columna derecha (foto) */}
                             <img

@@ -5,7 +5,7 @@ import Context from "../Context/Context";
 
 const Projects = () => {
     const [projectsData, setProjectsData] = useState(null);
-    const { language } = useContext(Context);
+    const { language, theme } = useContext(Context);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -36,7 +36,7 @@ const Projects = () => {
             <Row xs={1} sm={1} md={2} lg={3} className="g-4">
                 {projectsData.projects.map((project, index) => (
                     <Col key={index}>
-                        <Card className="project-card border-white" style={{ height: '100%' }}>
+                        <Card className={`project-card ${theme === 'light' ? 'light-theme' : 'dark-theme'}`} style={{ height: '100%' }}>
                             <Card.Img variant="top" src={project.image} />
                             <Card.Body>
                                 <Card.Title><strong>{project.title}</strong></Card.Title>
@@ -46,7 +46,8 @@ const Projects = () => {
                                         ))}
                                     </ul>
                             </Card.Body>
-                            <Card.Footer className="text-center project-list-group">
+                            <Card.Footer className={`text-center project-list-group ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
+                            
                                 <div className="d-flex justify-content-center align-items-center flex-wrap">
                                     {project.links.map((link, linkIndex) => (
                                         <a
@@ -54,7 +55,7 @@ const Projects = () => {
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="project-link me-2 mb-2 rounded text-white border border-white p-2"
+                                            className={`project-link me-2 mb-2 rounded text-${theme === 'light' ? 'dark' : 'white'} border border-${theme === 'light' ? 'dark' : 'white'} p-2`}
                                             style={{ textDecoration: 'none' }}
                                         >
                                             {link.text}
@@ -65,8 +66,9 @@ const Projects = () => {
                                     {project.tags.map((tag, tagIndex) => (
                                         <Badge
                                             key={tagIndex}
-                                            bg="light"
-                                            className="me-2 mb-2 rounded text-dark"
+                                            bg={theme === 'light' ? 'dark' : 'dark'}
+                                            className={`me-2 mb-2 rounded text-${theme === 'light' ? 'white' : 'white'}`}
+                                            
                                             style={{ backgroundColor: 'white' }}
                                         >
                                             {tag}

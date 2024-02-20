@@ -1,8 +1,54 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+*/
+
+/* Estilos generales del contenedor de la aplicación */
+#app-container {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* ajusta el ancho según sea necesario */
+  height: 100%; /* ajusta la altura según sea necesario */
+  /* otros estilos generales */
+}
+
+/* Estilos específicos para el tema claro */
+.light-theme {
+  background-color: #ffffff; /* fondo blanco */
+  color: #000000; /* texto negro */
+  /* otros estilos específicos para el tema claro */
+}
+
+/* Estilos específicos para el tema oscuro */
+.dark-theme {
+  background-color: #000000; /* fondo negro */
+  color: #ffffff; /* texto blanco */
+  /* otros estilos específicos para el tema oscuro */
+}
+
+#mySwitch {
+    background-color: white;
+    border-color: white !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+#mySwitch:checked {
     background-color: black;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    
+    border-color: black !important;
+    outline: 0;
+    box-shadow: none !important;
 }

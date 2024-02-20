@@ -9,7 +9,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const {language} = useContext(Context);
+    const {language, theme} = useContext(Context);
 
     const icon_height = 70;
     const icon_width = 70;
@@ -40,7 +40,7 @@ const Home = () => {
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className="home-container">
+        <div className={`home-container ${theme === 'light' ? 'light' : 'dark'}`}>
             <h1 className="home-name">{data.name}</h1>
             <div className="home-roles"> 
             <Typewriter
@@ -58,22 +58,22 @@ const Home = () => {
                 <SocialIcon
                     url={data.github}
                     target="_blank"
-                    bgColor="black"
-                    fgColor="white"
+                    bgColor={theme === 'light' ? 'white' : 'black'} // Invierte el color de fondo según el tema
+                    fgColor={theme === 'light' ? 'black' : 'white'} // Invierte el color del icono según el tema
                     style={{ height: icon_height, width: icon_width }}
                 />
                 <SocialIcon
                     url={data.linkedin}
                     target="_blank"
-                    bgColor="black"
-                    fgColor="white"
+                    bgColor={theme === 'light' ? 'white' : 'black'} // Invierte el color de fondo según el tema
+                    fgColor={theme === 'light' ? 'black' : 'white'} // Invierte el color del icono según el tema
                     style={{ height: icon_height, width: icon_width }}
                 />
                 <SocialIcon
                     url={`mailto:${data.email}`}
                     target="_blank"
-                    bgColor="black"
-                    fgColor="white"
+                    bgColor={theme === 'light' ? 'white' : 'black'} // Invierte el color de fondo según el tema
+                    fgColor={theme === 'light' ? 'black' : 'white'} // Invierte el color del icono según el tema
                     style={{ height: icon_height, width: icon_width }}
                 />
             </div>

@@ -11,12 +11,19 @@ import Navigation from './views/Navigation';
 import Contact from './views/Contact';
 import Context from "./Context/Context";
 import { determineLanguage } from './utils/language';
+import './index.css'
 
 function App() {
 
   const [menu, setMenu] = useState([]);
   const [menuLoaded, setMenuLoaded] = useState(false);
   const [language, setLanguage] = useState('');
+
+  // Estado del tema
+  const [theme, setTheme] = useState(() => {
+    // Obtiene el tema del localStorage si está disponible, o establece 'dark' como valor predeterminado
+    return localStorage.getItem('theme') || 'dark';
+  });
 
   useEffect(() => {
     const fetchAppData = async () => {
@@ -61,12 +68,24 @@ function App() {
     fetchMenu();
   }, [language]);
 
+  useEffect(() => {
+    // Guarda el tema en el localStorage
+    localStorage.setItem('theme', theme);
+
+    // Actualiza la clase del contenedor de la aplicación para reflejar el tema actual
+    const appContainer = document.getElementById('app-container');
+    if (appContainer) {
+      appContainer.className = theme === 'light' ? 'light-theme' : 'dark-theme';
+    }
+  }, [theme]);
+
   //console.log(language);
-  const globalState = { language, setLanguage, menu, setMenu };
+  const globalState = { language, setLanguage, menu, setMenu, theme, setTheme };
 
   return (
     <Context.Provider value={globalState}>
-      {menuLoaded && (
+        <div id="app-container">
+        {menuLoaded && (
         <Router>
           <Navigation />
           <Routes>
@@ -81,6 +100,7 @@ function App() {
           </Routes>
         </Router>
       )}
+      </div>
     </Context.Provider>
   );
 }

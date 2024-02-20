@@ -1,0 +1,13 @@
+
+.card-custom.dark {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    height: 100%;
+}
+.card-custom.light {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    height: 100%;
+}

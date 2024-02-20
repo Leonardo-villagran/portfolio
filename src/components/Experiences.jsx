@@ -1,15 +1,16 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { Chrono } from 'react-chrono';
 import '../assets/css/education.css';
 import { useState, useEffect, useContext } from 'react';
 import Context from "../Context/Context";
+import ChronoDark from '../utils/ChronoDark';
+import ChronoLight from '../utils/ChronoLight';
 
 const Education = () => {
-    const [educationData, setEducationData] = useState(null);
+    const [chronoData, setChronoData] = useState(null);
     const [width, setWidth] = useState('50vw');
     const [mode, setMode] = useState('VERTICAL');
     
-    const {language} = useContext(Context);
+    const {language, theme} = useContext(Context);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -21,7 +22,7 @@ const Education = () => {
                     throw new Error(`Error al cargar datos: ${response.statusText}`);
                 }
                 const data = await response.json();
-                setEducationData(data);
+                setChronoData(data);
 
                 if (window?.innerWidth < 576) {
                     setMode('VERTICAL');
@@ -45,61 +46,18 @@ const Education = () => {
         fetchData();
     }, [width, language]);
 
-    if (!educationData) {
+    if (!chronoData) {
         return <div>Loading...</div>;
     }
 
     return (
         <Container>
-            <h1 className="mt-4 mb-4 text-center">{educationData.title}</h1>
-            {educationData.experiences && (
+            <h1 className="mt-4 mb-4 text-center">{chronoData.title}</h1>
+            {chronoData.content && (
                 <Row>
                     <Col sm={12} className="mx-auto">
                         {/* Contenido de la sección de educación */}
-
-                        <Chrono
-                            hideControls
-                            allowDynamicUpdate
-                            focusActiveItemOnLoad
-                            slideShow
-                            enableDarkToggle
-                            mode={mode}
-                            useReadMore={false}
-                            items={educationData.experiences}
-                            cardHeight={90}
-                            theme={{
-                                primary: '#3d84c6', // Color de fondo de la línea de tiempo y del contenido
-                                secondary: 'white', // Color del punto de tiempo y de los detalles de la tarjeta
-                                cardBgColor: '#1b1b1b', // Fondo de la tarjeta
-                                titleColor: '#808080', // Color del título de la tarjeta
-                                titleColorActive: '#007fff', // Color del subtítulo de la tarjeta
-                                cardForeColor: 'red',
-                                cardSubtitleColor: '#3d84c6',
-                                cardTitleColor: 'white',
-                                cardDetailsColor: '#808080', // Color del texto de la tarjeta
-
-                            }}
-
-                            
-                            fontSizes={{
-                                cardSubtitle: '1rem',
-                                cardText: '1rem',
-                                cardTitle: '1.2rem',
-                                title: '0.8rem',
-
-                            }}
-
-                        >
-                            <div className="chrono-icons">
-                                {educationData.experiences.map((experiences) => (experiences.icon ? (
-                                    <img
-                                        key={experiences.icon.src}
-                                        src={experiences.icon.src}
-                                        alt={experiences.icon.alt}
-                                    />
-                                ) : null))}
-                            </div>
-                        </Chrono>
+                        {theme ==='dark' ? <ChronoDark mode={mode} chronoData={chronoData} /> : <ChronoLight mode={mode} chronoData={chronoData} />}
                     </Col>
                 </Row>
             )}

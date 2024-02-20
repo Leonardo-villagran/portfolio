@@ -1,4 +1,4 @@
-.home-container {
+.home-container.dark {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -6,6 +6,18 @@
     justify-content: center;
     color: white;
     background-color: black;
+    text-align: center;
+    /* Para centrar el texto horizontalmente */
+}
+
+.home-container.light {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
     text-align: center;
     /* Para centrar el texto horizontalmente */
 }
