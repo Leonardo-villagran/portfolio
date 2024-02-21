@@ -160,76 +160,99 @@
                 "Json",
                 "Netlify"
             ]
-        },{
+        },
+        {
             "image": "images/projects/portfolio.jpg",
             "title": "Portfolio - Web App",
             "bodyText": [
-            "Personal portfolio in English and/or Spanish.",
-            "Frontend developed in React-Vite.",
-            "Customizable through JSON files.",
-            "App deployed on Github Pages."
+                "Personal portfolio in English and/or Spanish.",
+                "Frontend developed in React-Vite.",
+                "Customizable through JSON files.",
+                "App deployed on Github Pages."
             ],
             "links": [
-            {
-            "text": "GitHub",
-            "href": "https://github.com/Leonardo-villagran/portfolio"
-            },
-            {
-            "text": "Live",
-            "href": "https://leonardo-villagran.github.io/portfolio/"
-            }
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/portfolio"
+                },
+                {
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/portfolio/"
+                }
             ],
             "tags": [
-            "React",
-            "Vite",
-            "JSON",
-            "Github Pages"
+                "React",
+                "Vite",
+                "JSON",
+                "Github Pages"
             ]
-            },{
-                "image": "images/projects/postgres.jpg",
-                "title": "PostgreSQL with Docker",
-                "bodyText": [
-                    "Docker Compose for PostgreSQL.",
-                    "Allows to deploy a PostgreSQL server.",
-                    "Configuration can be customized through docker-compose.yml and environment variables."
-                ],
-                "links": [
-                    {
-                        "text": "GitHub",
-                        "href": "https://github.com/Leonardo-villagran/postgres_normal"
-                    }
-                ],
-                "tags": [
-                    "Docker",
-                    "Docker Compose",
-                    "PostgreSQL"
-                ]
-            },{
-                "image": "images/projects/cuidadoras.jpg",
-                "title": "Cuidadoras - Web App",
-                "bodyText": [
+        },
+        {
+            "image": "images/projects/postgres.jpg",
+            "title": "PostgreSQL with Docker",
+            "bodyText": [
+                "Docker Compose for PostgreSQL.",
+                "Allows to deploy a PostgreSQL server.",
+                "Configuration can be customized through docker-compose.yml and environment variables."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/postgres_normal"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "image": "images/projects/mongodb.jpg",
+            "title": "MongoDB with Docker",
+            "bodyText": [
+                "MongoDB Docker Compose setup.",
+                "Allows to deploy a MongoDB server.",
+                "Configuration can be customized via docker-compose.yml and environment variables."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/mongodb_normal"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "MongoDB"
+            ]
+        },
+        {
+            "image": "images/projects/cuidadoras.jpg",
+            "title": "Cuidadoras - Web App",
+            "bodyText": [
                 "A website about home caregivers for patients.",
                 "Frontend developed in React.",
                 "Data obtained from JSON.",
                 "App deployed on Github Pages."
-                ],
-                "links": [
+            ],
+            "links": [
                 {
-                "text": "GitHub",
-                "href": "https://github.com/Leonardo-villagran/cuidadoras"
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/cuidadoras"
                 },
                 {
-                "text": "Live",
-                "href": "https://leonardo-villagran.github.io/cuidadoras/"
+                    "text": "Live",
+                    "href": "https://leonardo-villagran.github.io/cuidadoras/"
                 }
-                ],
-                "tags": [
+            ],
+            "tags": [
                 "React",
                 "TypeScript",
                 "JSON",
                 "GitHub Pages"
-                ]
-                },
+            ]
+        },
         {
             "image": "images/projects/pokemon.jpg",
             "title": "Frontend PokeApi - Web App",
@@ -257,4 +280,3 @@
         }
     ]
 }
-
