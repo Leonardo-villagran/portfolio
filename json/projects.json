@@ -188,46 +188,6 @@
             ]
         },
         {
-            "image": "images/projects/postgres.jpg",
-            "title": "PostgreSQL desde Docker",
-            "bodyText": [
-                "Docker Compose de PostgreSQL.",
-                "Permite ejecutar un servidor de PostgreSQL.",
-                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
-            ],
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/Leonardo-villagran/postgres_normal"
-                }
-            ],
-            "tags": [
-                "Docker",
-                "Docker Compose",
-                "PostgreSQL"
-            ]
-        },
-        {
-            "image": "images/projects/mongodb.jpg",
-            "title": "MongoDB desde Docker",
-            "bodyText": [
-                "Docker Compose de MongoDB.",
-                "Permite ejecutar un servidor de MongoDB.",
-                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
-            ],
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/Leonardo-villagran/mongodb_normal"
-                }
-            ],
-            "tags": [
-                "Docker",
-                "Docker Compose",
-                "MongoDB"
-            ]
-        },
-        {
             "image": "images/projects/cuidadoras.jpg",
             "title": "Cuidadoras - Web App",
             "bodyText": [
@@ -276,6 +236,46 @@
                 "React",
                 "Json",
                 "Github Pages"
+            ]
+        },
+        {
+            "image": "images/projects/postgres.jpg",
+            "title": "PostgreSQL desde Docker",
+            "bodyText": [
+                "Docker Compose de PostgreSQL.",
+                "Permite ejecutar un servidor de PostgreSQL.",
+                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/postgres_normal"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "image": "images/projects/mongodb.jpg",
+            "title": "MongoDB desde Docker",
+            "bodyText": [
+                "Docker Compose de MongoDB.",
+                "Permite ejecutar un servidor de MongoDB.",
+                "Se puede personalizar la configuración desde docker-compose.yml y las variables de entorno."
+            ],
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/Leonardo-villagran/mongodb_normal"
+                }
+            ],
+            "tags": [
+                "Docker",
+                "Docker Compose",
+                "MongoDB"
             ]
         }
     ]
