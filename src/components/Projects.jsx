@@ -36,7 +36,7 @@ const Projects = () => {
             <Row xs={1} sm={1} md={2} lg={3} className="g-4">
                 {projectsData.projects.map((project, index) => (
                     <Col key={index}>
-                        <Card className={`project-card ${theme === 'light' ? 'light-theme' : 'dark-theme'}`} style={{ height: '100%' }}>
+                        <Card className={`project-card ${theme === 'light' ? 'light-footer' : 'dark-footer'}`} style={{ height: '100%' }}>
                             <Card.Img variant="top" src={project.image} />
                             <Card.Body>
                                 <Card.Title><strong>{project.title}</strong></Card.Title>

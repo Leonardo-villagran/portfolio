@@ -6,11 +6,22 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el tema oscuro */
 }
 
+
+
 .light-theme .project-card {
     background-color: transparent; /* Fondo transparente */
     color: #000000; /* Cambia el color del texto para el tema claro */
     border: 1px solid black; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el tema claro */
+}
+
+.light-footer{
+    background-color: transparent; /* Fondo transparente */
+    color: #000000; /* texto negro */
+}
+.dark-footer{
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff; /* texto blanco */
 }
 
 .project-list-group {
