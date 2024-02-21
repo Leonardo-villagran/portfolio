@@ -23,6 +23,9 @@ body.light {
   padding: 0;
   width: 100%; /* ajusta el ancho según sea necesario */
   height: 100%; /* ajusta la altura según sea necesario */
+  background-size: cover; /* La imagen se expandirá para cubrir el contenedor */
+  
+
   /* otros estilos generales */
 }
 

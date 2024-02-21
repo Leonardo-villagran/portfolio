@@ -5,7 +5,6 @@
     align-items: center;
     justify-content: center;
     color: white;
-    background-color: black;
     text-align: center;
     /* Para centrar el texto horizontalmente */
 }
@@ -17,7 +16,6 @@
     align-items: center;
     justify-content: center;
     color: black;
-    background-color: white;
     text-align: center;
     /* Para centrar el texto horizontalmente */
 }

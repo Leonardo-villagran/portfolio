@@ -84,8 +84,8 @@ function App() {
 
   return (
     <Context.Provider value={globalState}>
-        <div id="app-container">
-        {menuLoaded && (
+      <div id="app-container" style={{ backgroundImage: `url(${theme === 'light' ? './images/container3_white.jpg' : './images/container3_black.jpg'})` }}>
+      {menuLoaded && (
         <Router>
           <Navigation />
           <Routes>

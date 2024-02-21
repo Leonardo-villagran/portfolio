@@ -125,7 +125,7 @@ const ContactForm = () => {
     //console.log('Datos cargados con éxito:', data);
 
     return (
-        <Container>
+        <Container fluid className="vh-100">
             <h1 className="mt-4 mb-4 text-center">{data.title}</h1>
             <div className="contact-form">
                 {/* Mostrar mensaje de éxito si el estado de respuesta es 200 */}

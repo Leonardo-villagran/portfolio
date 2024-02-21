@@ -1,13 +1,13 @@
 /* projects.css */
 .dark-theme .project-card {
-    background-color: black;
+    background-color: transparent; /* Fondo transparente */
     color: white; 
     border: 1px solid white; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el tema oscuro */
 }
 
 .light-theme .project-card {
-    background-color: #ffffff; /* Cambia el color de fondo de las cards para el tema claro */
+    background-color: transparent; /* Fondo transparente */
     color: #000000; /* Cambia el color del texto para el tema claro */
     border: 1px solid black; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el tema claro */
