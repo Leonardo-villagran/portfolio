@@ -1,15 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './views/Home';
-import About from './views/About';
-import Skills from './views/Skills';
-import Education from './views/Education';
-import Experiences from './views/Experiences';
-import Projects from './views/Projects';
 import Navigation from './views/Navigation';
-import Contact from './views/Contact';
 import Context from "./Context/Context";
+
+const Home = React.lazy(() => import('./views/Home'));
+const About = React.lazy(() => import('./views/About'));
+const Skills = React.lazy(() => import('./views/Skills'));
+const Education = React.lazy(() => import('./views/Education'));
+const Experiences = React.lazy(() => import('./views/Experiences'));
+const Projects = React.lazy(() => import('./views/Projects'));
+const Contact = React.lazy(() => import('./views/Contact'));
+
 import { determineLanguage } from './utils/language';
 import './index.css'
 
@@ -18,8 +20,6 @@ function App() {
   const [menu, setMenu] = useState([]);
   const [menuLoaded, setMenuLoaded] = useState(false);
   const [language, setLanguage] = useState('');
-
-  // Estado del tema
   const [theme, setTheme] = useState(() => {
     // Obtiene el tema del localStorage si está disponible, o establece 'dark' como valor predeterminado
     return localStorage.getItem('theme') || 'dark';
@@ -75,9 +75,10 @@ function App() {
     // Actualiza la clase del contenedor de la aplicación para reflejar el tema actual
     const appContainer = document.getElementById('app-container');
     if (appContainer) {
-      appContainer.className = theme === 'light' ? 'light-theme' : 'dark-theme';
-    }
+      appContainer.className = theme === 'light' ? 'light-theme fade-in visible' : 'dark-theme fade-in visible';
+  }
   }, [theme]);
+
 
   //console.log(language);
   const globalState = { language, setLanguage, menu, setMenu, theme, setTheme };
@@ -88,16 +89,18 @@ function App() {
       {menuLoaded && (
         <Router>
           <Navigation />
-          <Routes>
-            <Route path="/portfolio/" element={<Home />} />
-            <Route path="/portfolio/about" element={<About />} />
-            <Route path="/portfolio/skills" element={<Skills />} />
-            <Route path="/portfolio/education" element={<Education />} />
-            <Route path="/portfolio/experiences" element={<Experiences />} />
-            <Route path="/portfolio/projects" element={<Projects />} />
-            <Route path="/portfolio/contact" element={<Contact />} />
-            {/* Agrega más rutas según sea necesario */}
-          </Routes>
+          <Suspense fallback={<div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>Loading...</div>}>
+              <Routes>
+                <Route path="/portfolio/" element={<Home />} />
+                <Route path="/portfolio/about" element={<About />} />
+                <Route path="/portfolio/skills" element={<Skills />} />
+                <Route path="/portfolio/education" element={<Education />} />
+                <Route path="/portfolio/experiences" element={<Experiences />} />
+                <Route path="/portfolio/projects" element={<Projects />} />
+                <Route path="/portfolio/contact" element={<Contact />} />
+                {/* Agrega más rutas según sea necesario */}
+              </Routes>
+            </Suspense>
         </Router>
       )}
       </div>

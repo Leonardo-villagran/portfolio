@@ -46,7 +46,7 @@ const Projects = () => {
                                         ))}
                                     </ul>
                             </Card.Body>
-                            <Card.Footer className={`text-center project-list-group ${theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
+                            <Card.Footer className={`text-center project-list-group ${theme === 'light' ? 'light-footer' : 'dark-footer'}`}>
                             
                                 <div className="d-flex justify-content-center align-items-center flex-wrap">
                                     {project.links.map((link, linkIndex) => (
@@ -66,8 +66,8 @@ const Projects = () => {
                                     {project.tags.map((tag, tagIndex) => (
                                         <Badge
                                             key={tagIndex}
-                                            bg={theme === 'light' ? 'dark' : 'dark'}
-                                            className={`me-2 mb-2 rounded text-${theme === 'light' ? 'white' : 'white'}`}
+                                            bg={ 'dark'}
+                                            className={'me-2 mb-2 rounded text-white'}
                                             
                                             style={{ backgroundColor: 'white' }}
                                         >

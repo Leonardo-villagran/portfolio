@@ -55,3 +55,19 @@ body.light {
     outline: 0;
     box-shadow: none !important;
 }
+
+/* Definición de la animación de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comienza invisible */
+  }
+  to {
+    opacity: 1; /* Termina completamente visible */
+  }
+}
+
+/* Aplicación de la animación al elemento */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards; /* Duración de la animación y tipo de curva de aceleración */
+  opacity: 0; /* Garantiza que el elemento comience invisible */
+}

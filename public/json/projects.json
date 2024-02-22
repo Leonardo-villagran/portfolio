@@ -255,7 +255,8 @@
             "tags": [
                 "Docker",
                 "Docker Compose",
-                "PostgreSQL"
+                "PostgreSQL", 
+                "VS Code"
             ]
         },
         {
@@ -275,7 +276,8 @@
             "tags": [
                 "Docker",
                 "Docker Compose",
-                "MongoDB"
+                "MongoDB", 
+                "VS Code"
             ]
         }
     ]
