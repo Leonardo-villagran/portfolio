@@ -183,7 +183,7 @@
             "tags": [
                 "React",
                 "Vite",
-                "JSON",
+                "Json",
                 "Github Pages"
             ]
         },
@@ -209,7 +209,7 @@
             "tags": [
                 "React",
                 "TypeScript",
-                "JSON",
+                "Json",
                 "GitHub Pages"
             ]
         },
@@ -256,7 +256,8 @@
             "tags": [
                 "Docker",
                 "Docker Compose",
-                "PostgreSQL"
+                "PostgreSQL", 
+                "VS Code"
             ]
         },
         {
@@ -276,7 +277,8 @@
             "tags": [
                 "Docker",
                 "Docker Compose",
-                "MongoDB"
+                "MongoDB", 
+                "VS Code"
             ]
         }
     ]
