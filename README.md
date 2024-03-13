@@ -1,6 +1,6 @@
 ## React Portfolio Website
 
-Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes en inglés y español. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
+Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes en inglés y español. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas. Por otro lado, se agrega un tema oscuro y claro para realizar cambios estéticos.  
 
 Pueden ver el ejemplo en el siguiente enlace desde GitHub Pages: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
 

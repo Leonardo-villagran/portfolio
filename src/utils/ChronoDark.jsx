@@ -4,7 +4,6 @@ import { Chrono } from 'react-chrono';
 
 export default function Chronox(props) {
 
-
     const { mode, chronoData} = props;
 
     return (
@@ -31,8 +30,7 @@ export default function Chronox(props) {
                     cardDetailsColor: '#808080', // Color del texto de la tarjeta
 
                 }}
-
-
+                
                 fontSizes={{
                     cardSubtitle: '1rem',
                     cardText: '1rem',
