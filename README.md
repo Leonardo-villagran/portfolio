@@ -201,7 +201,7 @@ Ve a la página web de Netlify y crea una cuenta si aún no la tienes. Después 
 ![Render new](public/images/readme/new.png)
 
 3. Configurar el proyecto:
-Cuando ya has iniciado a configurar tu preyecto, elige un nombre para tu sitio y revisa su viabilidad con el botón `Check availability`.
+Seleciona el proyecto de Github y elige un nombre para tu sitio y revisa su viabilidad con el botón `Check availability`.
 
 ![Render select](public/images/readme/select.png)
 
