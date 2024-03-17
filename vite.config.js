@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/portfolio/',
+  base: '/',
   build: {
     assetsDir: 'assets', // Carpeta de salida para los assets
     chunkSizeWarningLimit: 2000, // Set the warning limit to 1000 kB

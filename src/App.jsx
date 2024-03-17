@@ -91,13 +91,13 @@ function App() {
           <Navigation />
           <Suspense fallback={<div className={theme === 'light' ? 'light-theme' : 'dark-theme'}>Loading...</div>}>
               <Routes>
-                <Route path="/portfolio/" element={<Home />} />
-                <Route path="/portfolio/about" element={<About />} />
-                <Route path="/portfolio/skills" element={<Skills />} />
-                <Route path="/portfolio/education" element={<Education />} />
-                <Route path="/portfolio/experiences" element={<Experiences />} />
-                <Route path="/portfolio/projects" element={<Projects />} />
-                <Route path="/portfolio/contact" element={<Contact />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/experiences" element={<Experiences />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
                 {/* Agrega más rutas según sea necesario */}
               </Routes>
             </Suspense>

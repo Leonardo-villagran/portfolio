@@ -54,42 +54,42 @@ const Navigation = () => {
         <Nav className={`mx-auto ${expanded ? "" : "justify-content-center"}`}>
           <Nav.Link
             as={Link}
-            to="/portfolio/"
+            to="/"
             className={expanded ? "collapsed-menu-item" : ""}
           >
             {menu.home}
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="/portfolio/about"
+            to="/about"
             className={expanded ? "collapsed-menu-item" : ""}
           >
             {menu.about}
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="/portfolio/skills"
+            to="/skills"
             className={expanded ? "collapsed-menu-item" : ""}
           >
             {menu.skills}
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="/portfolio/education"
+            to="/education"
             className={expanded ? "collapsed-menu-item" : ""}
           >
             {menu.education}
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="/portfolio/experiences"
+            to="/experiences"
             className={expanded ? "collapsed-menu-item" : ""}
           >
             {menu.experiences}
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="/portfolio/projects"
+            to="/projects"
             className={expanded ? "collapsed-menu-item" : ""}
           >
             {menu.projects}
@@ -106,7 +106,7 @@ const Navigation = () => {
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="/portfolio/contact"
+            to="/contact"
             className={expanded ? "collapsed-menu-item" : ""}
           >
             {menu.contact}

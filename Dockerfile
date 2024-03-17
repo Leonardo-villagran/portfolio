@@ -17,7 +17,7 @@ RUN npm run build
 RUN npm install -g serve
 
 # Expone el puerto 5000 en el contenedor (puedes cambiarlo según tu configuración)
-EXPOSE 3000
+EXPOSE 4173
 
 # Inicia la aplicación servida por serve desde la carpeta dist cuando se ejecute el contenedor
-CMD ["serve", "-s", "dist"]
+CMD ["npm", "run", "serve"]

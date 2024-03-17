@@ -2,7 +2,7 @@
 
 Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes en inglés y español. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas. Por otro lado, se agrega un tema oscuro y claro para realizar cambios estéticos.  
 
-Pueden ver el ejemplo en el siguiente enlace desde GitHub Pages: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
+Pueden ver el ejemplo en el siguiente enlace desde Netlify: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
 
 Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-o6cp.onrender.com/](https://portfolio-o6cp.onrender.com/)
 
@@ -188,25 +188,21 @@ Para configurar el sistema de contacto, sigue estos pasos:
 
 Con estos pasos, habrás configurado correctamente el sistema de contacto en tu aplicación. Este sistema utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas.
 
-### Cómo subir el portafolio a GitHub Pages
+### Cómo subir el portafolio a Netlify
 
-Para llevar a cabo la publicación de tu portafolio en GitHub Pages, sigue estas indicaciones:
+1. Subir tu proyecto a GitHub:
+Asegúrate de que tu proyecto se encuentra en un repositorio de GitHub. Si no lo has hecho, inicializa un repositorio git en tu proyecto y súbelo a GitHub.
 
-1. Clona o descarga el repositorio desde GitHub.
+2. Crear un nuevo sitio en Netlify:
+Ve a la página web de Netlify y crea una cuenta si aún no la tienes. Después de iniciar sesión, haz clic en el botón `Add new site`, luego presiona sobre `Import an existinf project`, y selecciona`Deploy with GitHub`. Luego sigue los pasos para conectar tu repositorio de GitHub.
 
-2. Asegúrate de que el nombre de tu repositorio sea "portfolio", de lo contrario, las rutas no funcionarán correctamente.
+3. Configurar las variables de entorno en Netlify:
+Una vez que hayas conectado tu repositorio de GitHub, pueeds cargar las variables de entorno directamente en la configuración en Netlify. Busca la opción para configurar las variables de entorno `Environment variables` y agrega las variables VITE_SERVICE_ID, VITE_TEMPLATE_ID y VITE_USER_ID con sus respectivos valores.
 
-3. En el archivo `package.json`, sustituye mi nombre de usuario de GitHub por el tuyo en la sección `homepage`.
+4. Configurar el comando de construcción en Netlify:
+En la misma sección de configuración de Netlify, asegúrate de configurar el comando de construcción de tu proyecto. Para proyectos React Vite, el comando de construcción es `npm run build` y la carpeta de destino es `dist`, luego presionar el botón que dice `Deploy`. 
 
-4. Para poder usar la sección de contacto a través de GitHub Pages, debes ingresar las variables de entorno al repositorio (`'tu_service_ID'`, `'tu_template_ID'` y `'tu_user_ID'`) a la sección `Settings>Environments>github-pages>` y en la sección `Environment secrets` ingresar cada variable con el contenido asociado a través del botón `Add secret`. 
-
-4. Una vez que hayas realizado todas las modificaciones necesarias, sube los cambios a GitHub y realiza la implementación con el siguiente comando:
-
-```bash
-npm run deploy
-```
-
-Siguiendo estos pasos, podrás desplegar tu portafolio en GitHub Pages de manera efectiva.
+Una vez completados estos pasos, Netlify debería desplegar automáticamente tu aplicación React Vite desde GitHub con las variables de entorno configuradas. Asegúrate de que tu aplicación funciona correctamente después del despliegue.
 
 ### Cómo subir a render.com
 
