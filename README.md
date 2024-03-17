@@ -2,7 +2,7 @@
 
 Este es un ejemplo básico de una aplicación de portafolio utilizando React y React Router para la navegación. La aplicación incluye una barra de navegación, secciones para la página de inicio, sobre mí, habilidades, educación, experiencias, proyectos y contacto. Se pueden personalizar los contenidos de cada sección editando los archivos JSON correspondientes en inglés y español. También se incluye un sistema de contacto que utiliza EmailJS para enviar emails a través de los servicios configurados con las credenciales proporcionadas. Por otro lado, se agrega un tema oscuro y claro para realizar cambios estéticos.  
 
-Pueden ver el ejemplo en el siguiente enlace desde Netlify: [https://leonardo-villagran.github.io/portfolio/](https://leonardo-villagran.github.io/portfolio/)
+Pueden ver el ejemplo en el siguiente enlace desde Netlify: [https://leonardo-villagran-portfolio.netlify.app](https://leonardo-villagran-portfolio.netlify.app)
 
 Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfolio-o6cp.onrender.com/](https://portfolio-o6cp.onrender.com/)
 
@@ -23,7 +23,7 @@ Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfoli
 
 - [Personalización](#personalización)
 - [Configuración del sistema de contacto](#configuración-del-sistema-de-contacto)
-- [Cómo subir el portafolio a GitHub Pages](#cómo-subir-el-portafolio-a-github-pages)
+- [Cómo subir el portafolio a Netlify](#cómo-subir-el-portafolio-a-netlify)
 - [Cómo subir a render.com](#cómo-subir-a-rendercom)
 
 
@@ -50,7 +50,7 @@ npm install
 npm run dev
 ```
 
-La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/portfolio/](http://localhost:3000/portfolio/) en tu navegador para verla.
+La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/](http://localhost:3000/) en tu navegador para verla.
 
 ### Estructura del Proyecto
 
@@ -196,11 +196,24 @@ Asegúrate de que tu proyecto se encuentra en un repositorio de GitHub. Si no lo
 2. Crear un nuevo sitio en Netlify:
 Ve a la página web de Netlify y crea una cuenta si aún no la tienes. Después de iniciar sesión, haz clic en el botón `Add new site`, luego presiona sobre `Import an existinf project`, y selecciona`Deploy with GitHub`. Luego sigue los pasos para conectar tu repositorio de GitHub.
 
-3. Configurar las variables de entorno en Netlify:
-Una vez que hayas conectado tu repositorio de GitHub, pueeds cargar las variables de entorno directamente en la configuración en Netlify. Busca la opción para configurar las variables de entorno `Environment variables` y agrega las variables VITE_SERVICE_ID, VITE_TEMPLATE_ID y VITE_USER_ID con sus respectivos valores.
+![Render new](public/images/readme/new.png)
+
+3. Configurar el proyecto:
+Cuando ya has iniciado a configurar tu preyecto, elige un nombre para tu sitio y revisa su viabilidad con el botón `Check availability`.
+
+![Render select](public/images/readme/select.png)
 
 4. Configurar el comando de construcción en Netlify:
-En la misma sección de configuración de Netlify, asegúrate de configurar el comando de construcción de tu proyecto. Para proyectos React Vite, el comando de construcción es `npm run build` y la carpeta de destino es `dist`, luego presionar el botón que dice `Deploy`. 
+En la misma sección de configuración de Netlify, asegúrate de configurar el comando de construcción de tu proyecto. Para proyectos React Vite, el comando de construcción es `npm run build` y la carpeta de destino es `dist`.
+
+![Render configure](public/images/readme/configure.png)
+
+5. Configurar las variables de entorno en Netlify:
+Una vez que hayas conectado tu repositorio de GitHub, pueeds cargar las variables de entorno directamente en la configuración en Netlify. Busca la opción para configurar las variables de entorno `Environment variables` y agrega las variables VITE_SERVICE_ID, VITE_TEMPLATE_ID y VITE_USER_ID con sus respectivos valores.
+
+![Render select](public/images/readme/variables.png)
+
+6. Una vez que todo esté configurado presiona el botón que dice `Deploy`.
 
 Una vez completados estos pasos, Netlify debería desplegar automáticamente tu aplicación React Vite desde GitHub con las variables de entorno configuradas. Asegúrate de que tu aplicación funciona correctamente después del despliegue.
 
@@ -214,32 +227,55 @@ Una vez completados estos pasos, Netlify debería desplegar automáticamente tu 
 
 3. Accede al Dashboard y haz clic en el botón llamado `New +`, luego selecciona "Web service".
 
-![Render new](public/images/render_new.jpg)
+![Render new](public/images/render_new.png)
 
 4. Debes dar permisos y seleccionar el proyecto desde GitHub. 
 
 ![Repo](public/images/repo.jpg)
 
-5. Una vez seleccionado el proyecto /portfolio, configura el proyecto; primero escribe un nombre y luego selecciona el runtime como Node o Docker. En este caso, lo realizaré con Node. 
+5. Una vez seleccionado el proyecto /portfolio, configura el proyecto: primero escribe un nombre, luego ingresa los comandos de construcción `npm install; npm run build` 
 
-![Node](public/images/node.jpg)
+![Serve](public/images/build.png)
 
-6. Para instalar y construir, puedes dejar la configuración por defecto. Para iniciar el servicio, utiliza `npm run serve` u otro comando que consideres mejor.
-
-![Serve](public/images/serve.jpg)
-
-7. Seleccionar la instancia Free (si no quieres pagar). Luego bajen y verán una sección llamada `Environment Variables` (si no se ve presionen el botón `advanced` y la encontrarás allí). Puedes ingresar las variables de entorno una a una o copiarlas todas dentro de la sección llamada `Add from .env`
+7. Después verán una sección llamada `Environment Variables`. Puedes ingresar las variables de entorno una a una o copiarlas todas dentro de la sección llamada `Add from .env`
 
 ![env](public/images/env4.jpg)
 
-8. Luego presionan el botón llamado `Create Web Service` y espera a que se ejecute el deploy. Si hay errores, debes corregir el problema y volver a ejecutar el deploy. En caso de que se realicen cambios en el repositorio de GitHub, se realizará el deploy nuevamente de forma automática.
+8. Luego presionan el botón llamado `Create Static Site` y espera a que se ejecute el deploy. Si hay errores, debes corregir el problema y volver a ejecutar el deploy. En caso de que se realicen cambios en el repositorio de GitHub, se realizará el deploy nuevamente de forma automática.
 
-![DashBoard](public/images/dash.jpg)
+![DashBoard](public/images/dash.png)
 
 9. Para poder acceder a la web, haz clic sobre el nombre del proyecto en el Dashboard y presiona sobre la dirección que aparece debajo del repositorio de GitHub.
 
-![link](public/images/link.jpg)
+![link](public/images/link.png)
 
 Con estos pasos, ya podrás acceder a tu portafolio desde Render.
 
-![alt text](public/images/cap_english.jpg)
+![alt text](public/images/cap_spanish.jpg)
+
+### Cómo ejecutar la aplicación en Docker
+
+1. Clonar el repositorio
+
+Una forma de levantar e servicio de forma local sin utilizar node, es correr el servidor en un contenedor de docker a través del repositorio.  
+
+```bash
+git clone https://github.com/Leonardo-villagran/portfolio
+cd portfolio
+```
+2. Construir y ejecutar el contenedor Docker
+
+El repositorio cuenta con un archivo `Dockerfile` que posee las caracteriíticas para generar la imagen de docker a utilizar y un docker compose para definir los servicios asociados para ejecutar el contenedor, pare esto solo se debe correr el siguiente comando: 
+
+```bash
+docker-compose up --build -d
+```
+
+3. Acceder a la aplicación
+Una vez que el contenedor esté en funcionamiento, puedes acceder a la aplicación en tu navegador web visitando:
+
+```bash
+http://localhost:3007/
+```
+
+Con esta sección añadida, los usuarios podrán seguir fácilmente los pasos para ejecutar tu aplicación en un contenedor Docker.
