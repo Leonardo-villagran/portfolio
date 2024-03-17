@@ -25,6 +25,7 @@ Pueden ver el ejemplo en el siguiente enlace desde Render.com: [https://portfoli
 - [Configuración del sistema de contacto](#configuración-del-sistema-de-contacto)
 - [Cómo subir el portafolio a Netlify](#cómo-subir-el-portafolio-a-netlify)
 - [Cómo subir a render.com](#cómo-subir-a-rendercom)
+- [Cómo ejecutar la aplicación en Docker](#cómo-ejecutar-la-aplicación-en-docker)
 
 
 ### Instrucciones de Uso
@@ -63,13 +64,13 @@ La aplicación se ejecutará en modo de desarrollo. Abre [http://localhost:3000/
 
 El archivo `src/App.jsx` utiliza React Router para manejar las rutas de la aplicación. A continuación, se describen las rutas disponibles:
 
-- `/portfolio/`: Página de inicio.
-- `/portfolio/about`: Página "Sobre Mí".
-- `/portfolio/skills`: Página de habilidades.
-- `/portfolio/education`: Página de educación.
-- `/portfolio/experiences`: Página de experiencias.
-- `/portfolio/projects`: Página de proyectos.
-- `/portfolio/contact`: Página de contacto.
+- `/`: Página de inicio.
+- `/about`: Página "Sobre Mí".
+- `/skills`: Página de habilidades.
+- `/education`: Página de educación.
+- `/experiences`: Página de experiencias.
+- `/projects`: Página de proyectos.
+- `/contact`: Página de contacto.
 
 Puedes personalizar estas rutas según tus necesidades y agregar más rutas según sea necesario.
 
@@ -265,11 +266,19 @@ cd portfolio
 ```
 2. Construir y ejecutar el contenedor Docker
 
-El repositorio cuenta con un archivo `Dockerfile` que posee las caracteriíticas para generar la imagen de docker a utilizar y un docker compose para definir los servicios asociados para ejecutar el contenedor, pare esto solo se debe correr el siguiente comando: 
+(2. Construir y ejecutar el contenedor Docker)
+
+Para generar la imagen de Docker y ejecutar el contenedor, el repositorio está equipado con un archivo llamado `Dockerfile`, el cual contiene las instrucciones precisas para construir la imagen. Además, se suministra un archivo `docker-compose.yml` que detalla los servicios asociados necesarios para ejecutar el contenedor de manera efectiva.
+
+Para llevar a cabo este proceso, simplemente ejecuta el siguiente comando en tu terminal:
 
 ```bash
 docker-compose up --build -d
 ```
+
+Este comando instruye a Docker Compose para que construya las imágenes de los contenedores definidos en el archivo `docker-compose.yml` si es necesario (usando la opción `--build`), y luego ejecute los contenedores en segundo plano (usando la opción `-d`).
+
+Una vez que el contenedor esté en funcionamiento, tu aplicación estará disponible en el puerto especificado en el archivo `docker-compose.yml`, lo que te permitirá acceder a ella a través de tu navegador web u otras herramientas de desarrollo.
 
 3. Acceder a la aplicación
 Una vez que el contenedor esté en funcionamiento, puedes acceder a la aplicación en tu navegador web visitando:
